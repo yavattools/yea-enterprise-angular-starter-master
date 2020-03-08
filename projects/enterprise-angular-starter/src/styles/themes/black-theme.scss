@@ -1,0 +1,19 @@
+// $yea-black-primary: mat-palette($mat-grey, 700, 300, 900);
+// $yea-black-accent: mat-palette($mat-blue-grey, 400);
+// $yea-black-warn: mat-palette($mat-red, 500);
+
+// $yea-black-theme: mat-dark-theme(
+//   $yea-black-primary,
+//   $yea-black-accent,
+//   $yea-black-warn
+// );
+
+$yea-black-primary: mat-palette($mat-grey, 700, 300, 900);
+$yea-black-accent: mat-palette($mat-blue-grey, 400);
+$yea-black-warn: mat-palette($mat-red, 500);
+
+$yea-black-theme: mat-dark-theme(
+  $yea-black-primary,
+  $yea-black-accent,
+  $yea-black-warn
+);

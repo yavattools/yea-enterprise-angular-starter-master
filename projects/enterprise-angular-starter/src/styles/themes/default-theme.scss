@@ -1,0 +1,182 @@
+// $yea-primary: mat-palette($mat-indigo, 800, 300, 900);
+// $yea-accent: mat-palette($mat-light-blue);
+// $yea-warn: mat-palette($mat-pink, 600);
+
+// $yea-theme: mat-light-theme($yea-primary, $yea-accent, $yea-warn);
+
+
+
+$mat-yea-buvva-palette-red: (
+    50 : #f8e5e5,
+    100 : #eebfbf,
+    200 : #e39494,
+    300 : #d76969,
+    400 : #cf4848,
+    500 : #c62828,
+    600 : #c02424,
+    700 : #b91e1e,
+    800 : #b11818,
+    900 : #a40f0f,
+    A100 : #ffd4d4,
+    A200 : #ffa1a1,
+    A400 : #ff6e6e,
+    A700 : #ff5454,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$mat-yea-buvva-yellow-palette: (
+    50 : #e0f3fc,
+    100 : #b3e0f6,
+    200 : #80cbf1,
+    300 : #4db6eb,
+    400 : #26a7e6,
+    500 : #0097e2,
+    600 : #008fdf,
+    700 : #0084da,
+    800 : #007ad6,
+    900 : #0069cf,
+    A100 : #f6faff,
+    A200 : #c3deff,
+    A400 : #90c2ff,
+    A700 : #77b4ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+$mat-mcgpalette-yellow: (
+    50 : #fffbe1,
+    100 : #fff5b3,
+    200 : #ffef81,
+    300 : #ffe84f,
+    400 : #ffe329,
+    500 : #ffde03,
+    600 : #ffda03,
+    700 : #ffd502,
+    800 : #ffd102,
+    900 : #ffc801,
+    A100 : #ffffff,
+    A200 : #fffcf2,
+    A400 : #fff0bf,
+    A700 : #ffe9a6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$mat-mcgpalette-dark-yellow: (
+    50 : #f9e0e0,
+    100 : #f0b3b3,
+    200 : #e68080,
+    300 : #db4d4d,
+    400 : #d42626,
+    500 : #cc0000,
+    600 : #c70000,
+    700 : #c00000,
+    800 : #b90000,
+    900 : #ad0000,
+    A100 : #ffd7d7,
+    A200 : #ffa4a4,
+    A400 : #ff7171,
+    A700 : #ff5858,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$mat-mcgpalette-light-yellow: (
+    50 : #fef0e3,
+    100 : #fcd9b9,
+    200 : #fabf8b,
+    300 : #f8a55d,
+    400 : #f7923a,
+    500 : #f57f17,
+    600 : #f47714,
+    700 : #f26c11,
+    800 : #f0620d,
+    900 : #ee4f07,
+    A100 : #ffffff,
+    A200 : #ffeae3,
+    A400 : #ffc5b0,
+    A700 : #ffb296,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$yea-primary: mat-palette($mat-mcgpalette-yellow, 800, 300, 900);
+$yea-accent: mat-palette($mat-mcgpalette-dark-yellow);
+
+// $yea-primary: mat-palette($mat-yea-buvva-yellow-palette, 700);
+// $yea-accent: mat-palette($mat-yea-buvva-palette-red);
+$yea-warn: mat-palette($mat-red);
+
+$yea-theme: mat-light-theme($yea-primary, $yea-accent, $yea-warn);

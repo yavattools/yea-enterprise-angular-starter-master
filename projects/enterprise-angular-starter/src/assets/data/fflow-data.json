@@ -1,0 +1,59 @@
+[
+    {
+      "expanded": false,
+      "name": "Funds Flow Summary",
+      "id": 1,
+      "data": [
+        {
+            "type": "Source of Funds",
+            "expanded": false,
+            "data": [
+              {"subType": "Fund from operations", "value": "100020.10"},
+              {"subType": "Funding from Intercompanies", "value": "200020.20"},
+              {"subType": "Long Term Borrowings", "value": "134020.00"},
+              {"subType": "Sale of Investments and other fixed assets", "value": "10020.40"},
+              {"subType": "Decrease in Working Capital**", "value": "1320.00"}
+            ]
+        },
+        {
+            "type": "Application of Funds",
+            "expanded": false,
+            "data": [
+            {"subType": "Purchase of fixed assets and investments", "value": "100020.10"},
+            {"subType": "Funding to Intercompanies", "value": "200020.20"},
+            {"subType": "Repayment of Loans (Principle)", "value": "134020.00"},
+            {"subType": "Payment of dividends to shareholders/CEO", "value": "10020.40"},
+            {"subType": "Payment of Taxes", "value": "1320.00"},
+            {"subType": "Increase in Working Capital**", "value": "12020.00"}
+          ]
+      }
+      ],
+      "date": "March 31 2019"
+    },
+    {
+        "expanded": false,
+        "name": "Net Income as per P&L Statement",
+        "id": 2,
+        "data": [
+        {
+            "type": "Additions/subtractions",
+            "expanded": false,
+            "data": [
+            {"subType": "Depreciation and amortization", "value": "200020.10"},
+            {"subType": "Provision for losses on accounts receivable", "value": "302020.20"},
+            {"subType": "Provision for Taxes", "value": "300020.20"},
+            {"subType": "Profit on sales of fixed assets/investments", "value": "300420.20"},
+            {"subType": "Any written back reserve and provision", "value": "350020.20"}
+          ]
+        },
+        {
+            "type": "Fund from operations",
+            "expanded": false,
+            "data": [
+            {"subType": "Fund from operations 1", "value": "208020.10"}
+          ]
+        }
+      ],
+      "date": "March 31 2019"
+    }
+  ]

@@ -1,0 +1,31 @@
+@import '~@angular/material/theming';
+
+@mixin yea-login-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+
+  yea-login {
+    .primary-color {
+      color: mat-color($primary) !important;
+    }
+
+    mat-card-title {
+      color: mat-color($primary) !important;
+    }
+
+    .signin-button-enabled {
+      background-color: rgba(255, 255, 255, 0.3) !important;
+      border: 1px solid #fff !important;
+      color: mat-color($primary) !important;
+      font-weight: 500;
+    }
+
+    .signin-button-disabled {
+      background-color: rgba(255, 255, 255, 0.3) !important;
+      border: 1px solid #fff !important;
+      color: gray !important;
+      font-weight: 500;
+    }
+  }
+}

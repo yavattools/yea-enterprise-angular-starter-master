@@ -1,0 +1,140 @@
+<div fxLayout fxLayoutWrap  mat-dialog-title fxLayout="row" class="dialog-header streach-h-100"
+     fxLayoutAlign="start center" fxLayoutGap="10px">
+      <h2 class="no-margin-padding" >{{title}}</h2>
+      <span fxFlex></span>
+      <!-- <button class="mat-icon-button mat-accent position-icon" 
+            (click)="close()">
+            <mat-icon  class="show-red">clear </mat-icon>
+      </button> -->
+</div>
+
+<mat-dialog-content [formGroup]="form" class="streach-h-100">
+<div class="address-form-outer-card">
+      <div fxLayout fxLayoutWrap fxLayout="row wrap" class="streach-h-100" fxLayoutAlign="start center" fxLayoutGap="10px">
+            <div  [fxFlex]="99" fxLayoutAlign="center center" class="streach-h-100">
+                  <mat-form-field class="streach-h-100">
+
+                              <input matInput  #addrLine1
+                                          placeholder="Address Line 1"
+                                          formControlName="addressLine1">
+                              <mat-icon  class="show-red" 
+                                          [class.show-red]="!addrLine1.value"
+                                          [class.show-green]="addrLine1.value"  matSuffix>mode_edit
+                              </mat-icon>
+                  </mat-form-field>
+            </div>
+            <div  [fxFlex]="99" fxLayoutAlign="center center" class="streach-h-100">
+                  <mat-form-field  class="streach-h-100">
+
+                              <input matInput #addrLine2
+                                          placeholder="Address Line 2"
+                                          formControlName="addressLine2">
+                              <mat-icon  class="show-silver" 
+                                          [class.show-silver]="!addrLine2.value"
+                                          [class.show-green]="addrLine2.value"  matSuffix>mode_edit
+                              </mat-icon>
+                  </mat-form-field>
+            </div>
+            <div  [fxFlex]="48" [fxFlex.xs]="100" [fxFlex.sm]="48" [fxFlex.md]="48" [fxFlex.gt.md]="48" 
+                        fxLayoutAlign="center center" >
+                  <mat-form-field class="streach-h-100">
+                              <input matInput #city
+                                          placeholder="City"
+                                          formControlName="city">
+                              <mat-icon  class="show-red" 
+                                          [class.show-red]="!city.value"
+                                          [class.show-green]="city.value"  matSuffix>mode_edit
+                              </mat-icon>
+                  </mat-form-field>
+            </div>
+            <div   [fxFlex]="48" [fxFlex.xs]="100" [fxFlex.sm]="48" [fxFlex.md]="48" [fxFlex.gt.md]="48"  fxLayoutAlign="center center" >
+                  <mat-form-field class="streach-h-100">
+                        <mat-select placeholder="Select Country" #country
+                        formControlName="country">
+            
+                        <mat-option value="India">
+                                    India</mat-option>
+                              <mat-option value="UnitedStates">
+                                    Uinited States of America</mat-option>
+                              <mat-option value="Japan">
+                                    Japan</mat-option>
+            
+                        </mat-select>
+                        <mat-icon  class="show-red" 
+                                    [class.show-red]="!country.value"
+                                    [class.show-green]="country.value"  matSuffix>mode_edit
+                        </mat-icon>
+                  </mat-form-field>
+            </div>
+            <div  [fxFlex]="48" [fxFlex.xs]="100" [fxFlex.sm]="48" [fxFlex.md]="48" [fxFlex.gt.md]="48"  fxLayoutAlign="center center" >
+                  <mat-form-field class="streach-h-100">
+                        <mat-select placeholder="Select State" #state
+                              formControlName="state">
+                  
+                              <mat-option value="India">
+                                    Telangana</mat-option>
+                              <mat-option value="UnitedStates">
+                                    Andhra pradesh</mat-option>
+                              <mat-option value="Japan">
+                                    Karnataka</mat-option>
+                  
+                        </mat-select>
+                        <mat-icon  class="show-red" 
+                                    [class.show-red]="!state.value"
+                                    [class.show-green]="state.value"  matSuffix>mode_edit
+                        </mat-icon>
+                  </mat-form-field>
+            </div>
+            <div  [fxFlex]="48" [fxFlex.xs]="100" [fxFlex.sm]="48" [fxFlex.md]="48" [fxFlex.gt.md]="48"  fxLayoutAlign="center center" >
+                  <mat-form-field class="streach-h-100">
+                              <input matInput #zipcode
+                                          placeholder="Zip Code"
+                                          formControlName="zipcode">
+                              <mat-icon  class="show-red" 
+                                          [class.show-red]="!zipcode.value"
+                                          [class.show-green]="zipcode.value"  matSuffix>mode_edit
+                              </mat-icon>
+                  </mat-form-field>
+            </div>
+      </div>
+            <!-- <mat-form-field>
+      
+            <input matInput [matDatepicker]="myDatepicker"
+                  formControlName="releasedAt">
+      
+            <mat-datepicker-toggle matSuffix
+                                    [for]="myDatepicker">
+      
+            </mat-datepicker-toggle>
+      
+            <mat-datepicker #myDatepicker></mat-datepicker>
+      
+            </mat-form-field> -->
+      
+            <!-- <mat-form-field>
+      
+            <textarea matInput placeholder="Description"
+                  formControlName="longDescription">
+      
+            </textarea>
+      
+            </mat-form-field> -->
+      
+      </div>
+
+      </mat-dialog-content>
+      
+      <mat-dialog-actions align="end">
+      
+            <button class="mat-raised-button mat-accent"
+                  (click)="close()">
+            Cancel
+            </button>
+      
+            <button class="mat-raised-button mat-primary"
+                  (click)="save()" [disabled]="!form.valid">
+            Save
+            </button>
+      
+      </mat-dialog-actions>
+    

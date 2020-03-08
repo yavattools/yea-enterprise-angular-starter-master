@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<name>enterprise-angular-starter</name>
+	<groupId>yea.angular</groupId>
+	<artifactId>yea-angular</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<node.version>v10.16.0</node.version>
+		<npm.version>6.10.1</npm.version>
+		<frontend-maven-plugin.version>1.7.6</frontend-maven-plugin.version>
+		<environment>prod</environment>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<delete file="package-lock.json" failOnError="false" />
+							</tasks>
+						</configuration>
+				 	</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<executions>
+					<execution>
+						<id>first-execution</id>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<phase>compile</phase>
+						<configuration>
+							<echo>Pulling Dependencies using npm</echo>
+							<executable>npm</executable>
+							<arguments>
+								<argument>install</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>second-execution</id>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<phase>compile</phase>
+						<configuration>
+							<echo>Building with Angular ng CLI</echo>
+							<executable>npm</executable>
+							<arguments>
+								<argument>run</argument>
+								<argument>build-prod</argument>
+								<!-- <argument>prod</argument>
+								<argument>base-href</argument> -->
+								<argument />
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.basedir}/yea-angular/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>src/assets/config</directory>
+									<filtering>true</filtering>
+									<includes>
+										<include>404.html</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<webXml>web.xml</webXml>
+					<webResources>
+						<resource>
+							<!-- this is relative to the pom.xml directory -->
+							<directory>yea-angular</directory>
+						</resource>
+					</webResources>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<update>true</update>
+					<path>/${project.name}##${project.version}</path>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>yea-releases</name>
+			<url>http://maven.yavat.com/artifactory/yea-release</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>yea-snapshots</name>
+			<url>http://maven.yavat.com/artifactory/yea-snapshot</url>
+		</snapshotRepository>
+	</distributionManagement>
+	
+	<repositories>
+		<repository>
+			<id>yea Repository</id>
+			<url>http://maven.yavat.com/artifactory/repo/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+	</repositories>
+
+	<scm>
+		<url>https://svn.yavat.com/svn/devel/yeaAngularTemplate/yea-angular/trunk</url>
+		<connection>scm:svn:https://svn.yavat.com/svn/devel/yeaAngularTemplate/yea-angular/trunk</connection>
+		<developerConnection>scm:svn:https://svn.yavat.com/svn/devel/yeaAngularTemplate/yea-angular/trunk</developerConnection>
+	</scm>
+
+</project>

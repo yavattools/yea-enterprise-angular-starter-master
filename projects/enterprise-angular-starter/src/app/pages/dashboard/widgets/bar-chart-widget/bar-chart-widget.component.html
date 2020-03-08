@@ -1,0 +1,43 @@
+<yea-chart-widget class="widget" [style.background]="options.background" [style.color]="options.color"
+ [ngClass]="routeAnimationsElements">
+  <yea-chart-widget-header [ngClass]="routeAnimationsElements">
+    <yea-chart-widget-header-title [ngClass]="routeAnimationsElements">{{ options.title }}</yea-chart-widget-header-title>
+    <yea-chart-widget-header-sub-title [ngClass]="routeAnimationsElements">
+      <mat-icon *ngIf="options.gain >= 0">arrow_upward</mat-icon>
+      <mat-icon *ngIf="options.gain < 0">arrow_downward</mat-icon>
+      {{ options.gain }}% {{ options.subTitle }}
+    </yea-chart-widget-header-sub-title>
+
+    <yea-chart-widget-header-actions [ngClass]="routeAnimationsElements">
+      <button mat-icon-button (click)="reload()">
+        <mat-icon>refresh</mat-icon>
+      </button>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </yea-chart-widget-header-actions>
+  </yea-chart-widget-header>
+
+  <yea-chart-widget-content class="card-content" [ngClass]="routeAnimationsElements">
+    <div class="content" [ngClass]="routeAnimationsElements">
+      <canvas #canvas [ngClass]="routeAnimationsElements"></canvas>
+    </div>
+  </yea-chart-widget-content>
+
+  <yea-loading-overlay [isLoading]="isLoading"></yea-loading-overlay>
+</yea-chart-widget>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon> settings</mat-icon>
+    <span> Settings </span>
+  </button>
+  <button mat-menu-item disabled>
+    <mat-icon> more</mat-icon>
+    <span> More Info </span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon> remove_circle</mat-icon>
+    <span> Remove Widget </span>
+  </button>
+</mat-menu>

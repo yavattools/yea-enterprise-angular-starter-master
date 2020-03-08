@@ -1,0 +1,416 @@
+<div class="container">
+  <div class="row align-items-end">
+    <div  class="col-md-12 col-lg-12 col-sm-12 col-xs-12" [ngClass]="routeAnimationsElements">
+      <mat-card>
+          <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="0px" >
+            <div   [fxFlex]="80" >
+              <mat-card-title>
+                {{selectedMeeting.name}}
+              </mat-card-title>
+              <mat-card-subtitle rtl>
+                {{ selectedMeeting.description }}
+              </mat-card-subtitle>
+            </div>
+            <div   [fxFlex]="20" >
+              <div>
+                <h2 style="margin-bottom: 0px;padding-bottom:0px;" class="show-orangered"> {{selectedMeeting.date}}</h2>
+                <h4 style="margin-bottom: 0px;padding-bottom:0px;font-weight: 100;" class="show-silver">Due Date</h4>
+              </div>
+            </div>
+            <div   [fxFlex]="90" >
+              <div>
+                <h1 style="margin-bottom: 0px;padding-bottom:0px;" >{{selectedMeeting.time}}</h1>
+                <h2 style="margin-top: 0px;padding-top:0px;"> March 20th 2020</h2>
+            </div>
+            </div>
+            <div   [fxFlex]="10" >
+
+            </div>
+            <div   [fxFlex]="100" >
+              <mat-expansion-panel #panel1 style="width:100%;"  [hideToggle]="hideToggle"
+                      [fxFlex]="100" style="position:relative;margin-bottom:5px !important;"  >
+                <mat-expansion-panel-header style="height:32px !important;">
+                    <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="0px" style="width:100%;"  >
+                      <div  [fxFlex]="100"   >
+                            <i style="float:left;width: 60px;position: relative;top: 5px;" class="fas  fa-user-tie fa-2x show-green"></i>
+                            <h1 class="header-data-label">Members Bio Profiles</h1>
+                      </div>
+                    </div>
+                </mat-expansion-panel-header>
+                <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="0px" >
+                  <div   [fxFlex]="100" [fxFlex.md]="50" [fxFlex.lg]="50" [fxFlex.xl]="50"
+                  [fxFlex.sm]="100" [fxFlex.xs]="100" >
+                <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="0px" >
+                  <div   [fxFlex]="30" >
+                    <img src="assets/img/ericssonses.jpg">
+                    <div style="position: relative;top: 10px;">
+                      <div  fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="0px" >
+                        <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+                          <div >
+                            <h5 class="no-margin-padding"> Randall</h5>
+                            <h6 class="no-margin-padding show-silver show-as-label">First Name:</h6>
+                          </div>
+                        </div>
+                        <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+                          <div >
+                            <h5 class="no-margin-padding"> Stephenson</h5>
+                            <h6 class="no-margin-padding show-silver show-as-label">Last Name:</h6>
+                          </div>
+                        </div>
+                       
+                      </div>
+                    </div>
+                  </div>
+                  <div   [fxFlex]="70" >
+                      <div  fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="0px" >
+                        <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+                          <span class="show-silver">Personal Bio:</span>
+                          <!-- <mat-divider></mat-divider> -->
+                        </div>
+                        <div [fxFlex]="20" fxLayoutAlign="start center" class="data-item-row"  >
+                          <div >
+                                <h5 class="no-margin-padding">57</h5>
+                                <h6 class="no-margin-padding show-silver show-as-label">Age</h6>
+                          </div>
+                        </div>
+                        <div [fxFlex]="80" fxLayoutAlign="start center" class="data-item-row"  >
+                              <div >
+                                <h5 class="no-margin-padding">Not Available</h5>
+                                <h6 class="no-margin-padding show-silver show-as-label">Family</h6>
+                              </div>
+                        </div>
+                        <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+                              <div >
+                                <h6 class="no-margin-padding show-silver">College</h6>
+                                <h5 class="no-margin-padding show-elipsis show-as-label">MSc, KTH Royal Institute of Technology, MBA, INSEAD</h5>
+                              </div>
+                        </div>      
+                     
+                      <div [fxFlex]="70" fxLayoutAlign="start center" class="data-item-row"  >
+                            <div >
+                              <h6 class="no-margin-padding show-silver">Other</h6>
+                              <h5 class="no-margin-padding show-elipsis show-as-label">Received Royal Award in 2015 for contributions to Swedish business</h5>
+                            </div>
+                      </div>      
+                  </div>
+                  </div>
+                </div>
+                </div>
+                <div   [fxFlex]="100" [fxFlex.md]="50" [fxFlex.lg]="50" [fxFlex.xl]="50"
+                    [fxFlex.sm]="100" [fxFlex.xs]="100">
+                <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="0px" >
+                  <div   [fxFlex]="30" >
+                    <img src="assets/img/ericssonses.jpg">
+                    <div style="position: relative;top: 10px;">
+                      <div  fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="0px" >
+                        <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+                          <div >
+                            <h5 class="no-margin-padding"> Randall</h5>
+                            <h6 class="no-margin-padding show-silver show-as-label">First Name:</h6>
+                          </div>
+                        </div>
+                        <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+                          <div >
+                            <h5 class="no-margin-padding"> Stephenson</h5>
+                            <h6 class="no-margin-padding show-silver show-as-label">Last Name:</h6>
+                          </div>
+                        </div>
+                       
+                      </div>
+                    </div>
+                  </div>
+                  <div   [fxFlex]="70" >
+                      <div  fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="0px" >
+                        <div [fxFlex]="100" fxLayoutAlign="start start" class="data-item-row"  >
+                          <span class="show-silver">Personal Bio:</span>
+                          <!-- <mat-divider></mat-divider> -->
+                        </div>
+                        <div [fxFlex]="20" fxLayoutAlign="start center" class="data-item-row"  >
+                          <div >
+                                <h5 class="no-margin-padding">57</h5>
+                                <h6 class="no-margin-padding show-silver show-as-label">Age</h6>
+                          </div>
+                        </div>
+                        <div [fxFlex]="80" fxLayoutAlign="start center" class="data-item-row"  >
+                              <div >
+                                <h5 class="no-margin-padding ">Not Available</h5>
+                                <h6 class="no-margin-padding show-silver show-as-label ">Family</h6>
+
+                              </div>
+                        </div>
+                        <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+                              <div >
+                                <h6 class="no-margin-padding show-silver ">College</h6>
+                                <h5 class="no-margin-padding show-elipsis show-as-label">MSc, KTH Royal Institute of Technology, MBA, INSEAD</h5>
+                              </div>
+                        </div>      
+                     
+                      <div [fxFlex]="70" fxLayoutAlign="start center" class="data-item-row"  >
+                            <div >
+                              <h6 class="no-margin-padding show-silver">Other</h6>
+                              <h5 class="no-margin-padding show-elipsis show-as-label">Received Royal Award in 2015 for contributions to Swedish business</h5>
+                            </div>
+                      </div>      
+                  </div>
+                  </div>
+                </div>
+               
+              </div>
+            
+              <div   [fxFlex]="100" [fxFlex.md]="50" [fxFlex.lg]="50" [fxFlex.xl]="50"
+              [fxFlex.sm]="100" [fxFlex.xs]="100">
+          <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="0px" >
+            <div   [fxFlex]="30" >
+              <img src="assets/img/ericssonses.jpg">
+              <div style="position: relative;top: 10px;">
+                <div  fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="0px" >
+                  <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+                    <div >
+                      <h5 class="no-margin-padding"> Randall</h5>
+                      <h6 class="no-margin-padding show-silver show-as-label">First Name:</h6>
+                    </div>
+                  </div>
+                  <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+                    <div >
+                      <h5 class="no-margin-padding"> Stephenson</h5>
+                      <h6 class="no-margin-padding show-silver show-as-label">Last Name:</h6>
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+            <div   [fxFlex]="70" >
+                <div  fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="0px" >
+                  <div [fxFlex]="100" fxLayoutAlign="start start" class="data-item-row"  >
+                    <span class="show-silver">Personal Bio:</span>
+                    <!-- <mat-divider></mat-divider> -->
+                  </div>
+                  <div [fxFlex]="20" fxLayoutAlign="start center" class="data-item-row"  >
+                    <div >
+                          <h5 class="no-margin-padding">57</h5>
+                          <h6 class="no-margin-padding show-silver show-as-label">Age</h6>
+                    </div>
+                  </div>
+                  <div [fxFlex]="80" fxLayoutAlign="start center" class="data-item-row"  >
+                        <div >
+                          <h5 class="no-margin-padding ">Not Available</h5>
+                          <h6 class="no-margin-padding show-silver show-as-label ">Family</h6>
+
+                        </div>
+                  </div>
+                  <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+                        <div >
+                          <h6 class="no-margin-padding show-silver ">College</h6>
+                          <h5 class="no-margin-padding show-elipsis show-as-label">MSc, KTH Royal Institute of Technology, MBA, INSEAD</h5>
+                        </div>
+                  </div>      
+               
+                <div [fxFlex]="70" fxLayoutAlign="start center" class="data-item-row"  >
+                      <div >
+                        <h6 class="no-margin-padding show-silver">Other</h6>
+                        <h5 class="no-margin-padding show-elipsis show-as-label">Received Royal Award in 2015 for contributions to Swedish business</h5>
+                      </div>
+                </div>      
+            </div>
+            </div>
+          </div>
+        </div>
+        <div   [fxFlex]="100" [fxFlex.md]="50" [fxFlex.lg]="50" [fxFlex.xl]="50"
+        [fxFlex.sm]="100" [fxFlex.xs]="100">
+    <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="0px" >
+      <div   [fxFlex]="30" >
+        <img src="assets/img/ericssonses.jpg">
+        <div style="position: relative;top: 10px;">
+          <div  fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="0px" >
+            <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+              <div >
+                <h5 class="no-margin-padding"> Randall</h5>
+                <h6 class="no-margin-padding show-silver show-as-label">First Name:</h6>
+              </div>
+            </div>
+            <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+              <div >
+                <h5 class="no-margin-padding"> Stephenson</h5>
+                <h6 class="no-margin-padding show-silver show-as-label">Last Name:</h6>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+      <div   [fxFlex]="70" >
+          <div  fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="0px" >
+            <div [fxFlex]="100" fxLayoutAlign="start start" class="data-item-row"  >
+              <span class="show-silver">Personal Bio:</span>
+              <!-- <mat-divider></mat-divider> -->
+            </div>
+            <div [fxFlex]="20" fxLayoutAlign="start center" class="data-item-row"  >
+              <div >
+                    <h5 class="no-margin-padding">57</h5>
+                    <h6 class="no-margin-padding show-silver show-as-label">Age</h6>
+              </div>
+            </div>
+            <div [fxFlex]="80" fxLayoutAlign="start center" class="data-item-row"  >
+                  <div >
+                    <h5 class="no-margin-padding ">Not Available</h5>
+                    <h6 class="no-margin-padding show-silver show-as-label ">Family</h6>
+
+                  </div>
+            </div>
+            <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+                  <div >
+                    <h6 class="no-margin-padding show-silver ">College</h6>
+                    <h5 class="no-margin-padding show-elipsis show-as-label">MSc, KTH Royal Institute of Technology, MBA, INSEAD</h5>
+                  </div>
+            </div>      
+         
+          <div [fxFlex]="70" fxLayoutAlign="start center" class="data-item-row"  >
+                <div >
+                  <h6 class="no-margin-padding show-silver">Other</h6>
+                  <h5 class="no-margin-padding show-elipsis show-as-label">Received Royal Award in 2015 for contributions to Swedish business</h5>
+                </div>
+          </div>      
+      </div>
+      </div>
+    </div>
+  </div>
+              <div   [fxFlex]="100"  fxLayoutAlign="end center"  fxLayoutGap="20px">
+                <button mat-raised-button color="primary"  >
+                  Approve
+                </button>
+                <button mat-raised-button color="primary"  >
+                  Need More Info
+                </button>
+              </div>
+            </div>
+              </mat-expansion-panel>
+              </div>
+              <div   [fxFlex]="100" >
+              <mat-expansion-panel #panel2  [hideToggle]="hideToggle"
+                      [fxFlex]="100"  style="position:relative;margin-bottom:5px !important;"  >
+                <mat-expansion-panel-header style="height:32px !important;">
+                    <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="0px" style="width:100%;"  >
+                      <div  [fxFlex]="100"   >
+                        <i style="float:left;width: 60px;position: relative;top: 5px;" class="fas  fa-file-invoice-dollar fa-2x show-orangered"></i>
+
+                            <h1 class="header-data-label">Company Business Profile</h1>
+                      </div>
+                    </div>
+                </mat-expansion-panel-header>
+                  <div  fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="0px" >
+                    <!-- <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+                      <span class="show-silver">Personal Bio:</span>
+                    </div> -->
+                    <div [fxFlex]="70" fxLayoutAlign="start center" class="data-item-row"  >
+                      <div >
+                            <h5 class="no-margin-padding">(2019) 227.2B SEK, +7.8%</h5>
+                            <h6 class="no-margin-padding show-silver show-as-label">Revenue</h6>
+                      </div>
+                    </div>
+                    <div [fxFlex]="30" fxLayoutAlign="start center" class="data-item-row"  >
+                          <div >
+                            <h5 class="no-margin-padding">99.4k</h5>
+                            <h6 class="no-margin-padding show-silver show-as-label">Employees</h6>
+                          </div>
+                    </div>
+                    <div [fxFlex]="70" fxLayoutAlign="start center" class="data-item-row"  >
+                        <div >
+                          <h5 class="no-margin-padding">(52 Wk. change): -5.2% YOY</h5>
+                          <h6 class="no-margin-padding show-silver show-as-label">Stock</h6>
+                        </div>
+                    </div>
+                    <div [fxFlex]="70" fxLayoutAlign="start center" class="data-item-row"  >
+                      <div >
+                        <h5 class="no-margin-padding">None</h5>
+                        <h6 class="no-margin-padding show-silver show-as-label">M&A</h6>
+                      </div>
+                </div>
+                    <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+                          <div >
+                            <h6 class="no-margin-padding show-silver">Business</h6>
+                            <h5 class="no-margin-padding show-elipsis show-as-label">
+                              AT&T is a Networking and telecommunications company offering services, software and infrastructure
+                              for mobility broadband and the cloud. In October 2019, AT&T aquired kathrein's antenna and filter business
+                              with revenues of $24B and 96k employees.
+
+                            </h5>
+                          </div>
+                    </div>   
+                    <div   [fxFlex]="100"  fxLayoutAlign="end center"  fxLayoutGap="20px">
+                      <button mat-raised-button color="primary"  >
+                        Approve
+                      </button>
+                      <button mat-raised-button color="primary"  >
+                        Need More Info
+                      </button>
+                    </div>   
+              </div>
+
+              </mat-expansion-panel>
+              </div>
+              <div   [fxFlex]="100" >
+              <mat-expansion-panel #panel3  [hideToggle]="hideToggle"
+                      [fxFlex]="100"  style="position:relative;margin-bottom:5px !important;"  >
+                <mat-expansion-panel-header style="height:32px !important;">
+                    <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="0px" style="width:100%;"  >
+                      <div  [fxFlex]="100"   >
+                        <i style="float:left;width: 60px;position: relative;top: 5px;" class="fas  fa-handshake fa-2x show-green"></i>
+
+                            <h1 class="header-data-label">Business with us</h1>
+                      </div>
+                    </div>
+                </mat-expansion-panel-header>
+                <div  fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="0px" >
+                  <div [fxFlex]="70" fxLayoutAlign="start center" class="data-item-row"  >
+                    <div >
+                          <h6 class="no-margin-padding show-silver ">Major Stratajic Items (AT&T Consumer)</h6>
+                          <h5 class="no-margin-padding show-as-label">AT&T nside the NBA</h5>
+                    </div>
+                  </div>
+                  <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+                        <div >
+                          <h6 class="no-margin-padding show-silver ">Important Message to be Delivered</h6>
+                          <h5 class="no-margin-padding show-as-label">
+                            AT&T needs continued support of AT&T's video optimization on AT&T's MSP (Multi-Service Proxy)
+                            platform and ability to evolve.
+                          </h5>
+                        </div>
+                  </div>
+                  <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+                      <div >
+                        <h6 class="no-margin-padding show-silver ">AT&T Global Business Executive Relationship</h6>
+                        <h5 class="no-margin-padding show-as-label">
+                          Charlie Bolton - SVP AT&T Global Business , (214) 464-3111
+                        </h5>
+                      </div>
+                  </div>
+                  <div [fxFlex]="100" fxLayoutAlign="start center" class="data-item-row"  >
+                    <div >
+                      <h6 class="no-margin-padding show-silver">AT&T Global Business Customer Executive Relationship</h6>
+                      <h5 class="no-margin-padding  show-as-label">CIO: Mats Hultin</h5>
+                    </div>
+              </div>
+              <div   [fxFlex]="100"  fxLayoutAlign="end center"  fxLayoutGap="20px">
+                <button mat-raised-button color="primary"  >
+                  Approve
+                </button>
+                <button mat-raised-button color="primary"  >
+                  Need More Info
+                </button>
+              </div>  
+            </div>
+
+              </mat-expansion-panel>
+            </div>
+          </div>
+
+        <mat-card-actions align="end">
+
+        
+
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

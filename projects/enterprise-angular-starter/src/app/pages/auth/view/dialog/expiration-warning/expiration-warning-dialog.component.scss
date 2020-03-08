@@ -1,0 +1,37 @@
+@import '../../../../../../styles/styles-variables';
+
+
+.save-dialog-outer-card {
+  width: 600px !important;
+  height: 250px !important;
+  // margin: 0px !important;
+  // padding: 10px !important;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  h2 {
+    font-weight: 300 !important;
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+  .content {
+    height: 180px !important;
+  }
+
+  .top-details-section {
+    width: 600px !important;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
+    padding-top: 0px;
+    padding-bottom: 4px !important;
+    border-bottom: dotted 1px silver;
+  }
+
+  .footer-section {
+    position: relative !important;
+    bottom: 0px !important;
+  }
+  .mat-card-actions {
+    // padding-right: 20px !important;
+  }
+}

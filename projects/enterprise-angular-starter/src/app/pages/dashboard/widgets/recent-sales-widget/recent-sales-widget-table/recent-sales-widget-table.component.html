@@ -1,0 +1,46 @@
+<!-- <yea-list fxFlex="grow" fxLayout="column" [hideHeader]="true">
+  <mat-table class="table" [dataSource]="dataSource" matSort>
+
+    <ng-container *ngFor="let column of columns">
+      <ng-container *ngIf="column.isModelProperty" [matColumnDef]="column.property">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> {{ column.name }}</mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <span class="yea-mobile-label">{{ column.name }}</span>
+          {{ row[column.property] }}
+        </mat-cell>
+      </ng-container>
+    </ng-container>
+
+
+    <mat-header-row *matHeaderRowDef="visibleColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: visibleColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator class="paginator" [pageSize]="pageSize"></mat-paginator>
+
+</yea-list> -->
+
+
+<yea-list [hideHeader]="true" class="list" fxFlex="grow" fxLayout="column">
+  <table [dataSource]="dataSource" class="table" mat-table matSort>
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Model Properties Column -->
+    <ng-container *ngFor="let column of columns">
+      <ng-container *ngIf="column.isModelProperty" [matColumnDef]="column.property">
+        <th *matHeaderCellDef mat-header-cell mat-sort-header> {{ column.name }}</th>
+        <td *matCellDef="let row" mat-cell>{{ row[column.property] }}</td>
+      </ng-container>
+    </ng-container>
+
+
+    <tr *matHeaderRowDef="visibleColumns" mat-header-row></tr>
+    <!--suppress UnnecessaryLabelJS -->
+    <tr *matRowDef="let row; columns: visibleColumns;" mat-row></tr>
+  </table>
+
+  <mat-paginator [pageSize]="pageSize" class="paginator"></mat-paginator>
+
+</yea-list>

@@ -1,0 +1,41 @@
+<div class="toolbar" fxLayout="row" fxLayoutAlign="space-between">
+    <mat-toolbar color="primary">
+        
+  <div fxLayout="row" fxLayoutAlign="start center" class="streach-h-100">
+    <div fxFlex="25"  fxLayoutAlign="start center">
+        <div fxLayout="row" fxLayoutAlign="start center" class="streach-h-100">
+        <yea-toolbar-sidenav-mobile-toggle [leftpanel]="leftpanel"></yea-toolbar-sidenav-mobile-toggle>
+
+            <!-- <button class="button" mat-icon-button fxHide.xs  fxShow.gt-md> -->
+          <!-- <mat-icon style="font-size:2.1rem;">whatshot</mat-icon> -->
+          <i  fxHide.xs  fxShow.gt-md class="fas fa-graduation-cap fa-2x"></i>
+          <!-- <img          style="height:50px;top:-5px;position:relative;"
+          src="assets/img/atl_logo.png"> -->
+        <!-- </button> -->
+        <div class="site-title-div">
+          <h1 class="title">Tution PlUS</h1>
+          <!-- <h6 class="sub-title">{{(loginUserStaffProfile$ | async).unit.unitName}}</h6> -->
+          <h6 class="sub-title">Right Place to Learn Right!!</h6>
+        </div>
+        </div>
+    </div>
+
+    <!-- <div fxFlex="75" fxLayoutAlign="center center" fxShow.gt-md fxHide>
+      <yea-toolbar-search-bar  ></yea-toolbar-search-bar>
+    </div> -->
+  </div>
+
+  <div fxLayout="row" style="height:64px !important;">
+
+    <!-- <yea-toolbar-fullscreen-toggle class="button"></yea-toolbar-fullscreen-toggle> -->
+
+    <yea-toolbar-search class="button"></yea-toolbar-search>
+
+    <yea-toolbar-notifications class="button"></yea-toolbar-notifications>
+
+    <yea-toolbar-user-button class="button"></yea-toolbar-user-button>
+
+    <yea-toolbar-quickpanel-toggle class="button" [quickpanel]="quickpanel"></yea-toolbar-quickpanel-toggle>
+  </div>
+    </mat-toolbar>
+</div>

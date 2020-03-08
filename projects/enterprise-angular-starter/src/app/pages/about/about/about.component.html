@@ -1,0 +1,60 @@
+<div class="background">
+  <div class="gradient">
+    <div class="container">
+      <h1>{{ 'yea.title.long' | translate }}</h1>
+      <div class="actions">
+        <a [ngClass]="routeAnimationsElements" mat-raised-button class="actions-main" color="primary" routerLink="../feature-list">
+          {{ 'yea.menu.features' | translate }}
+        </a>
+        <a mat-raised-button class="actions-main" color="accent" routerLink="../examples" [ngClass]="routeAnimationsElements">
+          {{ 'yea.menu.examples' | translate }}
+        </a>
+        <a mat-raised-button class="actions-main" color="warn" routerLink="../settings" [ngClass]="routeAnimationsElements">
+          {{ 'yea.about.change-theme' | translate }}
+        </a>
+        <br>
+        <span [ngClass]="routeAnimationsElements">{{ 'yea.about.check-blogs' | translate }}</span>
+        <br>
+        
+      </div>
+      <div class="get-started" [ngClass]="routeAnimationsElements">
+        <h2>{{ 'yea.about.get-started' | translate }}</h2>
+        <code>git clone
+          https://github.com/yavattools/yavat-enterprise-angular-starter.git
+          new-project</code><br>
+        <code>cd new-project</code><br>
+        <code>npm install</code><br>
+        <code>npm start</code>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="follow-releases" [ngClass]="routeAnimationsElements">
+    <h2 rtl>{{ 'yea.about.get-notified.title' | translate }}</h2>
+    <p rtl>
+      {{ 'yea.about.get-notified.follow' | translate }} <a href="https://www.twitter.com/releasebutler" target="_blank">Release
+        Butler</a>
+      {{ 'yea.about.get-notified.description' | translate }}
+    </p>
+
+    <img [src]="releaseButler" alt="Release Butler tweet example">
+  </div>
+</div>
+<div class="container" rtl>
+  <div class="contributors" [ngClass]="routeAnimationsElements">
+    <h2>{{ 'yea.about.contributors.title' | translate }}</h2>
+    <p>{{ 'yea.about.contributors.description1' | translate }}</p>
+    <p>{{ 'yea.about.contributors.description2' | translate }}</p>
+    <p>
+      {{ 'yea.about.contributors.description3' | translate }}
+      <a href="https://github.com/yavattools/yavat-enterprise-angular-starter-master/issues" target="_blank">{{'yea.about.contributors.issues'
+        | translate}}</a>
+      {{ 'yea.about.contributors.description4' | translate }}
+      <a href="https://github.com/yavattools/yavat-enterprise-angular-starter-master/blob/master/CONTRIBUTING.md" target="_blank">{{'yea.about.contributors.guide'
+        | translate}}</a>
+      ...
+    </p>
+
+  </div>
+</div>

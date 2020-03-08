@@ -1,0 +1,92 @@
+.streach-h-100 {
+  width: 100%;
+}
+
+.streach-v-100 {
+  height: 100%;
+}
+
+.show-silver {
+  color: gray;
+}
+
+.show-green {
+  color: green;
+}
+.show-orangered {
+  color: orangered;
+}
+.show-blue {
+  color: #0574b0;
+}
+.no-margin-padding {
+  margin: 0px;
+  padding: 0px;
+}
+
+.show-card-silver {
+  // border-left: 1px solid silver;
+  // border-right: 1px solid silver;
+  border-top: 1px solid silver;
+  border-bottom: 4px solid silver;
+}
+
+.show-card-green {
+  // border-left: 1px solid #43a047;
+  // border-right: 1px solid #43a047;
+  border-top: 1px solid #43a047;
+  border-bottom: 4px solid #43a047;
+}
+
+.show-card-orangered {
+  // border-left: 1px solid orangered;
+  // border-right: 1px solid orangered;
+  border-top: 1px solid orangered;
+  border-bottom: 4px solid orangered;
+}
+
+.show-card-blue {
+  // border-left: 1px solid #2481C7;
+  // border-right: 1px solid #2481C7;
+  border-top: 1px solid #2481c7;
+  border-bottom: 4px solid #2481c7;
+}
+
+.show-as-label {
+  position: relative;
+  top: -7px;
+}
+
+/* ============= Snackbar Styles =============== */
+.success {
+  margin-top: 105px !important;
+  background-color: rgba(174, 213, 129, 0.9) !important;
+  color: #1b5e20 !important;
+
+  .mat-simple-snackbar-action {
+    color: #1b5e20 !important;
+  }
+
+  .mat-simple-snackbar-action:hover {
+    color: rgba(0, 0, 0, 0.87) !important;
+    text-shadow: 2px 2px 8px #1b5e20;
+  }
+}
+
+.mat-snack-bar-container {
+  max-width: 900px !important;
+}
+
+.error {
+  margin-top: 105px !important;
+  background-color: rgba(255, 204, 188, 0.9) !important;
+  color: #b71c1c !important;
+  .mat-simple-snackbar-action {
+    color: #b71c1c !important;
+  }
+
+  .mat-simple-snackbar-action:hover {
+    color: rgba(0, 0, 0, 0.87) !important;
+    text-shadow: 2px 2px 8px #ff0000;
+  }
+}

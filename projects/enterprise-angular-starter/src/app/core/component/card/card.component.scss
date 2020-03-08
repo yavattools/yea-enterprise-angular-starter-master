@@ -1,0 +1,81 @@
+@import 'styles-variables';
+
+.yea-card {
+  background: white;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 100%;
+  height: 100%;
+  position: relative;
+
+  @include mat-elevation($card-elevation);
+}
+
+.yea-card-header {
+  align-items: flex-start;
+  align-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: $spacing;
+  white-space: nowrap;
+
+  .yea-card-header-title-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: $spacing;
+
+    .yea-card-header-title {
+      white-space: nowrap;
+      @include mat-typography-level-to-styles($config, subheading-1);
+      
+      align-items: center;
+      align-content: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+
+    }
+
+    .yea-card-header-sub-title {
+      color: $theme-secondary-text;
+      font-size: 13px;
+      white-space: nowrap;
+      @include mat-typography-level-to-styles($config, body-1);
+    }
+  }
+
+  .yea-card-header-actions {
+    color: $theme-icon;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+  }
+}
+
+.yea-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0 $spacing $spacing;
+
+}
+
+.yea-card-actions {
+  border-top: 1px solid $theme-divider;
+  display: flex;
+  flex-direction: row;
+  padding: $spacing/3 $spacing/1.5;
+
+  button + button {
+    margin-left: $spacing/3;
+  }
+
+  &.yea-card-actions-align-end {
+    justify-content: flex-end;
+  }
+}

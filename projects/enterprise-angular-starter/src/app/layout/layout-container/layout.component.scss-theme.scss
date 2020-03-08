@@ -1,0 +1,191 @@
+@import '~@angular/material/theming';
+
+@mixin yea-layout-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+
+  $custom-background-color: rgba(0, 0, 0, 0);
+
+  $background: map_merge(
+    $background,
+    (
+      background: $custom-background-color
+    )
+  );
+  $theme: map_merge(
+    $theme,
+    (
+      background: $background
+    )
+  );
+
+  .footer {
+    color: mat-color($primary, lighter);
+    background-color: mat-color($primary, darker);
+
+    .links,
+    .signature {
+      a {
+        right: 0em;
+        color: mat-color($primary, default-transparent);
+        position: relative !important;
+        &:hover {
+          color: mat-color($accent, default-transparent);
+        }
+      }
+      .year{
+        color: mat-color($primary, default-transparent);
+        &:hover {
+          color: mat-color($accent, default-transparent);
+        }
+      }
+      right: 0em;
+      color: mat-color($primary, default-transparent);
+      position: relative;
+    }
+  }
+
+  // yea-layout {
+  .background {
+    color: mat-color($foreground, text);
+    background-color: mat-color($background, background);
+
+    .gradient {
+      &::before {
+        background: linear-gradient(
+          to bottom,
+          mat-color($background, background, 0) 0%,
+          mat-color($background, background, 1) 100%
+        );
+      }
+    }
+  }
+
+  // }
+
+  .top-h-menu {
+    position: fixed !important;
+    top: 63px !important;
+    left: 0px !important;
+    right: 0px !important;
+    overflow-x: auto !important;
+    // z-index: 1 !important;
+    background-color: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.22), 0 2px 14px rgba(0, 0, 0, 0.44) !important;
+    // z-index: 999 !important;
+    // box-shadow: 0 16px 24px 2px rgba(100, 100, 100, 0.14), 0 6px 30px 5px rgba(100, 100, 100, 0.12), 0 8px 10px -5px rgba(100, 100, 100, 0.3) !important;
+  }
+
+  .dashboard-icon-button {
+    cursor: pointer;
+    background-color: transparent !important;
+    border-bottom: 2px solid rgba(155, 155, 155, 0.9) !important;
+    transition: border-bottom-color 500ms linear !important ;
+    padding: 10px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    min-width: 90px !important;
+    min-height: 40px !important;
+    text-align: center;
+    margin-right: 3px !important;
+    .dashboard-icon {
+      color: gray !important;
+      transition: color 500ms ease-in-out !important;
+    }
+    .material-icons {
+      color: gray;
+      transition: color 500ms ease-in-out;
+    }
+    .dashboard-icon-title {
+      color: gray !important;
+      transition: color 500ms ease-in-out;
+      .title {
+        position: relative !important;
+        top: 5px !important;
+      }
+      .sub-title {
+        font-size: 0.6rem !important;
+      }
+    }
+  }
+
+  .dashboard-left-menu-button {
+    color: mat-color($primary, darker) !important;
+    text-align: left;
+    align-content: left;
+  }
+
+  .dashboard-icon-button:hover {
+    cursor: pointer;
+    border-bottom: 2px solid mat-color($primary, darker) !important;
+    transition: border-bottom-color 500ms linear !important ;
+    min-width: 90px !important;
+    min-height: 40px !important;
+    padding: 10px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    margin-right: 3px !important;
+    .dashboard-icon {
+      color: mat-color($primary, darker) !important;
+      transition: color 50ms ease-in-out !important;
+      transition-delay: 50ms;
+    }
+    .material-icons {
+      color: mat-color($primary, darker);
+      transition: color 50ms ease-in-out;
+      transition-delay: 50ms;
+    }
+    .dashboard-icon-title {
+      color: mat-color($primary, darker) !important;
+      transition: color 50ms ease-in-out;
+      transition-delay: 50ms;
+
+      .title {
+        position: relative !important;
+        top: 5px !important;
+      }
+      .sub-title {
+        font-size: 0.6rem !important;
+      }
+    }
+  }
+
+  .dashboard-icon-button-selected {
+    cursor: pointer;
+    background-color: #e1e1e1 !important;
+    transition: background-color 500ms ease-in-out !important ;
+    border-bottom: 2px solid mat-color($primary, darker) !important;
+    transition: border-bottom-color 500ms ease-in-out !important ;
+    padding: 10px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    min-width: 90px !important;
+    min-height: 40px !important;
+    margin-right: 3px !important;
+    .dashboard-icon {
+      color: mat-color($primary, darker) !important;
+      transition: color 100ms ease-in-out !important;
+      transition-delay: 10ms;
+    }
+    .material-icons {
+      color: mat-color($primary, darker);
+      transition: color 100ms ease-in-out;
+      transition-delay: 10ms;
+    }
+    .dashboard-icon-title {
+      color: mat-color($primary, darker) !important;
+      transition: color 100ms ease-in-out;
+      transition-delay: 10ms;
+
+      .title {
+        position: relative !important;
+        top: 5px !important;
+      }
+      .sub-title {
+        font-size: 0.6rem !important;
+      }
+    }
+  }
+}

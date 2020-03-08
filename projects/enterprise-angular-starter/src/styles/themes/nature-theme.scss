@@ -1,0 +1,20 @@
+// $yea-nature-primary: mat-palette($mat-brown, 700, 300, 900);
+// $yea-nature-accent: mat-palette($mat-deep-purple, 300);
+// $yea-nature-warn: mat-palette($mat-red, 600);
+
+// $yea-nature-theme: mat-light-theme(
+//   $yea-nature-primary,
+//   $yea-nature-accent,
+//   $yea-nature-warn
+// );
+
+
+$yea-nature-primary: mat-palette($mat-brown, 700, 300, 900);
+$yea-nature-accent: mat-palette($mat-deep-purple, 300);
+$yea-nature-warn: mat-palette($mat-red, 600);
+
+$yea-nature-theme: mat-light-theme(
+  $yea-nature-primary,
+  $yea-nature-accent,
+  $yea-nature-warn
+);

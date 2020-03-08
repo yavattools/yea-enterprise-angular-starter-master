@@ -1,0 +1,54 @@
+@import 'styles-variables';
+
+.yea-chart-widget {
+  background: white;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  position: relative;
+  max-width: 100%;
+
+  @include mat-elevation($card-elevation);
+}
+
+.yea-chart-widget-header {
+  align-items: center;
+  align-content: center;
+  display: flex;
+  justify-content: space-between;
+  padding: $spacing/1.5 $spacing;
+  white-space: nowrap;
+
+  .yea-chart-widget-header-title-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .yea-chart-widget-header-title {
+      @include mat-typography-level-to-styles($config, subheading-1);
+      font-weight: 500;
+    }
+
+    .yea-chart-widget-header-sub-title {
+      @include mat-typography-level-to-styles($config, caption);
+
+      .mat-icon {
+        font-size: 14px;
+        height: 14px;
+        vertical-align: text-top;
+        width: 14px;
+
+      }
+    }
+  }
+
+}
+
+.yea-chart-widget-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: $spacing/1.5 $spacing $spacing;
+
+}

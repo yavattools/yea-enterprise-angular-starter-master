@@ -1,0 +1,307 @@
+<div class="dashboard padding" fxLayout="column" [fxLayoutGap]="gap">
+
+   <!-- FIRST ROW -->
+   <div fxFlex="noshrink" fxLayout="column" [fxLayoutGap]="gap"
+        fxLayout.gt-lg="row">
+      <div fxLayout="column" [fxLayoutGap]="gap" [fxFlex]="col(4)"
+          fxLayout.gt-sm="row">
+
+        <div
+            fxFlex="auto" [fxFlex.gt-sm]="col(4)"  [ngClass]="routeAnimationsElements">
+            <yea-quick-info-widget 
+              fxFlex="grow" value="1500" 
+              [options]="ytdSalesQuickInfo"  >
+            </yea-quick-info-widget>
+        </div>
+
+        <div 
+            fxFlex="auto" [fxFlex.gt-sm]="col(4)"  [ngClass]="routeAnimationsElements">
+            <yea-quick-info-widget 
+              fxFlex="grow" value="200" [options]="ytdReturnsQuickInfo" >
+            </yea-quick-info-widget>
+        </div>
+
+      </div>
+
+      <div fxLayout="column" [fxLayoutGap]="gap" [fxFlex]="col(4)"
+          fxLayout.gt-sm="row">
+
+        <div 
+            fxFlex="auto" [fxFlex.gt-sm]="col(4)"  [ngClass]="routeAnimationsElements">
+            <yea-quick-info-widget 
+            fxFlex="grow" value="700" 
+            [options]="ytdMembersQuickInfo"></yea-quick-info-widget>
+        </div>
+
+        <div 
+            fxFlex="auto" [fxFlex.gt-sm]="col(4)"  [ngClass]="routeAnimationsElements">
+            <yea-quick-info-widget 
+              fxFlex="grow" value="300" [options]="ytdSubscriptionsQuickInfo"></yea-quick-info-widget>
+        </div>
+      
+      </div>
+    </div>
+  <!-- END FIRST ROW -->
+
+  <!-- FIRST ROW -->
+  <div fxFlex="noshrink" fxLayout="column" [fxLayoutGap]="gap"
+       fxLayout.gt-lg="row">
+    <div fxLayout="column" [fxLayoutGap]="gap" [fxFlex]="col(2)"
+         fxLayout.gt-sm="row">
+
+      <div 
+           fxFlex="auto" [fxFlex.gt-sm]="col(4)"  [ngClass]="routeAnimationsElements">
+        <yea-bar-chart-widget  class="widget"
+                               [data]="salesMonthlyData$ | async"
+                               [options]="totalSalesOptions"></yea-bar-chart-widget>
+      </div>
+
+      <div 
+           fxFlex="auto" [fxFlex.gt-sm]="col(4)"  [ngClass]="routeAnimationsElements">
+     
+        <yea-bar-chart-widget  class="widget"
+                                [data]="returnsMonthlyData$ | async"
+                                [options]="totalReturnsOptions"></yea-bar-chart-widget>
+      </div>
+
+    </div>
+
+    <div fxLayout="column" [fxLayoutGap]="gap" [fxFlex]="col(2)"
+         fxLayout.gt-sm="row">
+
+      <div 
+           fxFlex="auto" [fxFlex.gt-sm]="col(4)"  [ngClass]="routeAnimationsElements">
+     
+        <yea-bar-chart-widget  class="widget"
+                                [data]="membersMonthlyData$ | async"
+                                [options]="totalMembersOptions"></yea-bar-chart-widget>
+      </div>
+
+      <div 
+           fxFlex="auto" [fxFlex.gt-sm]="col(4)"  [ngClass]="routeAnimationsElements">
+       
+         <yea-bar-chart-widget  class="widget"
+                                [data]="subscriptionsMonthlyData$ | async"
+                                [options]="subscriptionsMonthlyOptions"></yea-bar-chart-widget>
+      </div>
+
+    </div>
+  </div>
+  <!-- END FIRST ROW -->
+
+   <!-- Thrid ROW -->
+<div fxFlex="noshrink" fxLayout="column" [fxLayoutGap]="gap"
+   fxLayout.gt-lg="row">
+<div fxLayout="column" [fxLayoutGap]="gap" [fxFlex]="col(2)"
+     fxLayout.gt-sm="row">
+
+  <div 
+       fxFlex="auto" [fxFlex.gt-sm]="col(4)"  [ngClass]="routeAnimationsElements">
+    <yea-line-chart-widget  class="widget"
+                           [data]="totalSalesMonthlyTrendOptionsData$ | async"
+                           [options]="totalSalesMonthlyTrendOptions"></yea-line-chart-widget>
+  </div>
+
+  <div 
+       fxFlex="auto" [fxFlex.gt-sm]="col(4)"  [ngClass]="routeAnimationsElements">
+    <yea-line-chart-widget  class="widget"
+                            [data]="totalReturnsMonthlyTrendOptionsData$ | async"
+                            [options]="totalReturnsMonthlyTrendOptions"></yea-line-chart-widget>
+  </div>
+
+</div>
+
+<div fxLayout="column" [fxLayoutGap]="gap" [fxFlex]="col(2)"
+     fxLayout.gt-sm="row">
+
+  <div 
+       fxFlex="auto" [fxFlex.gt-sm]="col(4)" [ngClass]="routeAnimationsElements">
+    <yea-line-chart-widget 
+                            [data]="totalMembersMonthlyTrendOptionsData$ | async"
+                            [options]="totalMembersMonthlyTrendOptions"></yea-line-chart-widget>
+   
+  </div>
+
+  <div 
+       fxFlex="auto" [fxFlex.gt-sm]="col(4)" [ngClass]="routeAnimationsElements">
+    <yea-line-chart-widget 
+                            [data]="totalSubscriptionsMonthlyTrendOptionsData$ | async"
+                            [options]="totalSubscriptionsMonthlyTrendOptions"></yea-line-chart-widget>
+     
+  </div>
+
+</div>
+</div>
+<!-- END Third ROW -->
+
+   <!-- Fourth ROW -->
+   <div fxFlex="noshrink" fxLayout="column" [fxLayoutGap]="gap"
+   fxLayout.gt-lg="row">
+<div fxLayout="column" [fxLayoutGap]="gap" [fxFlex]="col(2)"
+     fxLayout.gt-sm="row">
+
+  <div 
+       fxFlex="auto" [fxFlex.gt-sm]="col(4)" [ngClass]="routeAnimationsElements" >
+       <yea-donut-chart-widget 
+       [data]="productSalesShareDemoData$ | async" 
+       [options]="productSalesShareDemoOptions"></yea-donut-chart-widget>
+  </div>
+
+  <div 
+       fxFlex="auto" [fxFlex.gt-sm]="col(4)" [ngClass]="routeAnimationsElements" >
+       <yea-donut-chart-widget 
+       [data]="productReturnsShareDemoData$ | async"
+       [options]="productReturnsShareDemoOptions"></yea-donut-chart-widget>
+  </div>
+
+</div>
+
+<div fxLayout="column" [fxLayoutGap]="gap" [fxFlex]="col(2)"
+     fxLayout.gt-sm="row" >
+
+  <div 
+       fxFlex="auto" [fxFlex.gt-sm]="col(4)" [ngClass]="routeAnimationsElements">
+    <yea-realtime-users-widget 
+                            [data$]="realtimeUsersData$"
+                            [pages$]="realtimeUsersPages$">
+    </yea-realtime-users-widget>
+     
+  </div>
+
+</div>
+</div>
+<!-- END Fourth ROW -->
+
+  <div fxFlex="noshrink" fxLayout="column" [fxLayoutGap]="gap"
+       fxLayout.gt-lg="row">
+
+    <div fxLayout="column" [fxLayoutGap]="gap" [fxFlex]="col(2)">
+
+      <div fxLayout="column" [fxLayoutGap]="gap"
+           fxLayout.gt-sm="row">
+     
+        <div fxFlex="grow">
+          <mat-card class="example-card" class="route-animations-elements">
+            <mat-card-header>
+              <!-- <img mat-card-avatar src="assets/img/avatars/1.jpg"> -->
+              <mat-card-title>Highest Sale Product</mat-card-title>
+              <mat-card-subtitle>Product 1</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image style="height:255px" 
+                  src="https://cnet4.cbsistatic.com/img/dIJsvv2W8wSdo4NS9wtJm01Td58=/868x488/2017/04/12/4902f747-a77c-4993-b086-acdfcf54957e/apple-iphone-se-2017-28.jpg"
+                 alt="Photo of a Product 1">
+            <mat-card-content>
+              <p>
+                  Despite this, the iPhone has consistently ranked among the most popular devices in the world since its initial release in June 2007. Although the iPhone is the company's biggest revenue generator by far, Apple offers a multitude of products across a variety of consumer electronics categories.
+              </p>
+            </mat-card-content>
+            <mat-card-actions align="end">
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        <div fxFlex="grow">
+          <mat-card class="example-card" class="route-animations-elements">
+            <mat-card-header>
+              <!-- <img mat-card-avatar src="assets/img/avatars/1.jpg"> -->
+              <mat-card-title>Least Sale Product</mat-card-title>
+              <mat-card-subtitle>Product 4</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image  style="height:255px"
+                  src="https://cnet4.cbsistatic.com/img/KnuL1WDed3sanatLbE4YDddJGVg=/2017/10/31/312b3b6e-59b7-499a-aea4-9bc5f9721a21/iphone-x-54.jpg"
+                 alt="Photo of a Prduct 4">
+            <mat-card-content>
+              <p>
+                  Despite this, the iPhone has consistently ranked among the most popular devices in the world since its initial release in June 2007. Although the iPhone is the company's biggest revenue generator by far, Apple offers a multitude of products across a variety of consumer electronics categories.
+              </p>
+            </mat-card-content>
+            <mat-card-actions align="end">
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+
+      <!-- <yea-market-widget></yea-market-widget> -->
+    </div>
+
+    <div fxLayout="column" [fxLayoutGap]="gap" [fxFlex]="col(2)">
+
+      <div fxFlex="grow" [ngClass]="routeAnimationsElements">
+        <yea-recent-sales-widget  [options]="recentSalesOptions" 
+                                  [chartData]="recentSalesData$ | async"
+                                  [tableOptions]="recentSalesTableOptions"
+                                  [tableData]="recentSalesTableData$ | async">
+        </yea-recent-sales-widget>
+      </div>
+
+     
+
+    </div>
+  </div>
+  <div fxFlex="noshrink" fxLayout="column" [fxLayoutGap]="gap"
+        fxLayout.gt-lg="row">
+
+    <div   fxLayout="column" [fxLayoutGap]="gap" [fxFlex]="col(4)">
+      <div fxFlex="grow">
+          <yea-maps-widget class="route-animations-elements"></yea-maps-widget>
+        </div>
+    </div>
+
+</div>
+
+  <div fxFlex="noshrink" fxLayout="column" [fxLayoutGap]="gap"
+       fxLayout.gt-lg="row">
+       <div fxLayout="column" [fxLayoutGap]="gap" [fxFlex]="col(2)">
+
+ <!-- Footer start-->
+    <div class="dash-footer" fxLayout="column" [fxLayoutGap]="gap" >
+        <div class="row"  [ngClass]="routeAnimationsElements">
+          <div class="col-sm-12 links">
+          
+            <a href=""
+                target="_blank">
+              <fa-icon [icon]="['fab','youtube']"></fa-icon>
+              <span>Youtube</span>
+            </a>
+            <a href="" target="_blank">
+              <fa-icon [icon]="['fab','twitter']"></fa-icon>
+              <span>Twitter</span>
+            </a>
+           
+            <a href="" target="_blank">
+              <fa-icon [icon]="['fab','instagram']"></fa-icon>
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.github.com/yavattools" target="_blank">
+              <fa-icon [icon]="['fab','github']"></fa-icon>
+              <span>Github</span>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 signature">
+            &#169; <span class="year">{{year}}</span> - YAVAT Angular Enterprise Starter
+            <br class="d-block d-sm-none">
+            <a [matTooltip]="'yea.footer.changelog' | translate"
+               matTooltipPosition="before"
+               href="">
+              <fa-icon icon="rocket"></fa-icon>
+              {{version}} <span *ngIf="!isProd">[{{envName}}]</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <!-- </div> -->
+      <!--  Footer End--> 
+        </div>
+  
+    </div>
+
+
+
+

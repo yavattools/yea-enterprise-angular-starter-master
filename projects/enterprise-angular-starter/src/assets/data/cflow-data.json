@@ -1,0 +1,61 @@
+[
+    {
+      "expanded": false,
+      "name": "Cash Flow Summary",
+      "id": 1,
+      "data": [
+        {
+            "type": "Net Profit / Loss for the Month",
+            "expanded": false,
+            "data": [
+                {"subType": "Net Profit / Loss for the Month 1", "value": "100020.10"}
+            ]
+        },
+        {
+            "type": "Add:- Non-Cash Items",
+            "expanded": false,
+            "data": [
+            {"subType": "Depreciation", "value": "100020.10"},
+            {"subType": "Provisions/ Accruals", "value": "200020.20"}
+          ]
+      },
+      {
+        "type": "Operating Profit/Loss before Working Capital Movements",
+        "expanded": false,
+        "data": [
+          {"subType": "(Increase)/Decrease Inventories", "value": "100020.10"},
+          {"subType": "(Increase)/Decrease Accounts Receivable and other receivables", "value": "200020.20"},
+          {"subType": "(Increase)/Decrease Inventories", "value": "100020.10"},
+          {"subType": "Increase/(Decrease) Accounts Payable", "value": "100020.10"},
+          {"subType": "(Increase/(Decrease) Long term Accounts Payables", "value": "100020.10"},
+          {"subType": "(Increase)/Decrease Inventories", "value": "100020.10"}
+        ]
+    },
+    {
+        "type": "Net Cash Flows generated from/used in Operating Activities",
+        "expanded": false,
+        "data": [
+          {"subType": "Depreciation", "value": "100020.10"},
+          {"subType": "Provisions/ Accruals", "value": "200020.20"}
+        ]
+      },
+      {
+        "type": "Investment Activities",
+        "expanded": false,
+        "data": [
+          {"subType": "Invetsment in Long term Assets/Fixed Assets/FOREX", "value": "100020.10"},
+          {"subType": "Net Cash Flows generated from/used in Investment Activities", "value": "200020.20"}
+        ]
+      },
+      {
+        "type": "Financing Activities",
+        "expanded": false,
+        "data": [
+          {"subType": "Bank Borrowals", "value": "100020.10"},
+          {"subType": "Increase in due to related parties", "value": "200020.20"}
+        ]
+      }
+      ],
+      "date": "March 31 2019"
+    }
+  ]

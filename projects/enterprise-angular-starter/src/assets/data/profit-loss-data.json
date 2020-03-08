@@ -1,0 +1,148 @@
+[
+      {
+        "id": 1,
+        "type": "Revenue",
+        "expanded": false,
+        "data": [
+          {"subType": "Sub Revenue 1", "value": "100020.10"},
+          {"subType": "Sub Revenue 2", "value": "200020.20"},
+          {"subType": "Sub Revenue 3", "value": "134020.00"},
+          {"subType": "Sub Revenue 4", "value": "10020.40"},
+          {"subType": "Sub Revenue 5", "value": "1320.00"},
+          {"subType": "Sub Revenue 6", "value": "12020.00"}
+        ]
+      },
+        {
+          "id": 2,
+          "type": "Direct Cost of Operations",
+          "expanded": false,
+          "data": [
+            {"subType": "Sub Direct Cost of Operations 1", "value": "100020.10"},
+            {"subType": "Sub Direct Cost of Operations 2", "value": "200020.20"},
+            {"subType": "Sub Direct Cost of Operations 3", "value": "134020.00"},
+            {"subType": "Sub Direct Cost of Operations 4", "value": "10020.40"},
+            {"subType": "Sub Direct Cost of Operations 5", "value": "1320.00"},
+            {"subType": "Sub Direct Cost of Operations 6", "value": "12020.00"}
+          ]
+      },
+      {
+        "id": 3,
+        "type": "Increase/Decrease in Inventory",
+        "expanded": false,
+        "data": [
+          {"subType": "Sub Increase/Decrease in Inventory 1", "value": "100020.10"},
+          {"subType": "Sub Increase/Decrease in Inventory 2", "value": "200020.20"},
+          {"subType": "Sub Increase/Decrease in Inventory 3", "value": "134020.00"},
+          {"subType": "Sub Increase/Decrease in Inventory 4", "value": "10020.40"},
+          {"subType": "Sub Increase/Decrease in Inventory 5", "value": "1320.00"},
+          {"subType": "Sub Increase/Decrease in Inventory 6", "value": "12020.00"}
+        ]
+      },
+        {
+          "id": 4,
+          "type": "Gross Margin",
+          "expanded": false,
+          "data": [
+            {"subType": "Revenue", "value": "100020.10"},
+            {"subType": "Direct Cost of Operations", "value": "200020.20"}
+          ]
+        },
+        {
+          "id": 5,
+          "type": "Other Income",
+          "expanded": false,
+          "data": [
+            {"subType": "Sub Other Income 1", "value": "100020.10"},
+            {"subType": "Sub Other Income 2", "value": "200020.20"},
+            {"subType": "Sub Other Income 3", "value": "134020.00"},
+            {"subType": "Sub Other Income 4", "value": "10020.40"},
+            {"subType": "Sub Other Income 5", "value": "1320.00"},
+            {"subType": "Sub Other Income 6", "value": "12020.00"}
+          ]
+        },
+        {
+          "id": 6,
+          "type": "Employee Benefits",
+          "expanded": false,
+          "data": [
+            {"subType": "Sub Employee Benefits 1", "value": "200020.10"},
+            {"subType": "Sub Employee Benefits 2", "value": "300020.20"}
+          ]
+        },
+        {
+          "id": 7,
+          "type": "General and Administration",
+          "expanded": false,
+          "data": [
+            {"subType": "General and Administration 1", "value": "200020.10"},
+            {"subType": "General and Administration 2", "value": "300020.20"},
+            {"subType": "General and Administration 3", "value": "300020.20"},
+            {"subType": "General and Administration 4", "value": "300020.20"}
+          ]
+        },
+        {
+          "id": 8,
+          "type": "Selling and Distribution",
+          "expanded": false,
+          "data": [
+            {"subType": "Selling and Distribution 1", "value": "200020.10"},
+            {"subType": "Selling and Distribution 2", "value": "300020.20"}
+          ]
+        },
+        {
+          "id": 9,
+          "type": "Depreciation and Amortisation",
+          "expanded": false,
+          "data": [
+            {"subType": "Depreciation and Amortisation 1", "value": "200020.10"},
+            {"subType": "Depreciation and Amortisation 2", "value": "300020.20"}
+          ]
+        },
+        {
+          "id": 10,
+          "type": "Finance Costs",
+          "expanded": false,
+          "data": [
+            {"subType": "Finance Costs 1", "value": "200020.10"},
+            {"subType": "Finance Costs 2", "value": "300020.20"}
+          ]
+        },
+        {
+          "id": 11,
+          "type": "Other Expenses",
+          "expanded": false,
+          "data": [
+            {"subType": "Other Expenses 1", "value": "200020.10"},
+            {"subType": "Other Expenses 2", "value": "300020.20"}
+          ]
+        },
+        {
+          "id": 12,
+          "type": "Profit Before Taxes",
+          "expanded": false,
+          "data": [
+            {"subType": "Gross Margin", "value": "200020.10"},
+            {"subType": "Other Income", "value": "300020.20"},
+            {"subType": "Indirect Expenses", "value": "300020.20"}
+          ]
+        },
+        {
+          "id": 13,
+          "type": "Taxation",
+          "expanded": false,
+          "data": [
+            {"subType": "Taxation 1", "value": "200020.10"},
+            {"subType": "Taxation 2", "value": "300020.20"},
+            {"subType": "Taxation 3", "value": "300020.20"}
+          ]
+        },
+        {
+          "id": 14,
+          "type": "Net Profit",
+          "expanded": false,
+          "data": [
+            {"subType": "Profit Before Taxes", "value": "200020.10"},
+            {"subType": "Taxation", "value": "300020.20"}
+          ]
+        }
+  ]

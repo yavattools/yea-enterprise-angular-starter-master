@@ -1,0 +1,48 @@
+@import '~@angular/material/theming';
+
+@mixin yea-toolbar-user-button-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+
+  $custom-background-color: rgba(0, 0, 0, 0);
+
+  $background: map_merge(
+    $background,
+    (
+      background: $custom-background-color
+    )
+  );
+  $theme: map_merge(
+    $theme,
+    (
+      background: $background
+    )
+  );
+
+ 
+
+  yea-toolbar-user {
+    .background {
+      color: mat-color($foreground, text);
+      background-color: mat-color($background, background);
+
+      .gradient {
+        &::before {
+          background: linear-gradient(
+            to bottom,
+            mat-color($background, background, 0) 0%,
+            mat-color($background, background, 1) 100%
+          );
+        }
+      }
+    }
+
+    .user-profile-menu-title {
+      color: mat-color($primary, default-transparent);
+      font-weight: 300 !important;
+    }
+  }
+
+}

@@ -1,0 +1,93 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1 rtl class="main-heading">{{ 'yea.student.title' | translate }}</h1>
+    </div>
+    <div class="col-md-6" align='end'>
+      <mat-form-field  style="width:200px !important;margin-top: 20px;;"  >
+        <mat-select multiple placeholder="Filter" class="streach-h-100"
+            (selectionChange)="filterChangehandler($event)"  [matTooltip]="selectedFilters"
+            [(ngModel)]="selectedFilters" #filterMe  #filterModel="ngModel">
+            <mat-divider></mat-divider>
+            <mat-option #allfilters  class="show-green" 
+                (click)="filterMe.close();selectAllFilters(allfilters.selected)"
+                [value]="-1">Select All</mat-option>
+            <mat-divider></mat-divider>
+            
+            <mat-option [disabled]="allfilters.selected" *ngFor="let item of filters"
+                            [value]="item.name">{{item?.name}}</mat-option>
+            
+        </mat-select>
+        <mat-hint align="start">
+                <span [hidden]="selectedFilters?.length"  class="show-orangered">Required</span>
+                </mat-hint>
+                <mat-icon  matSuffix  >
+                        filter_list
+                    </mat-icon>
+    </mat-form-field>
+    </div>
+  </div>
+  <div class="row align-items-end">
+    <div *ngFor="let student of students" class="col-md-4 col-lg-3" [ngClass]="routeAnimationsElements">
+      <mat-card  >
+        <mat-card-header>
+          <img mat-card-avatar  src="{{student.imageUrl}}">
+          <mat-card-title> {{student.firstName}}, {{student.lastName}}</mat-card-title>
+          <mat-card-subtitle><span class="show-silver">Dob:</span> {{student.dob}} - <span class="show-silver">Grade: </span> {{ student.grade }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="0px" >
+            <div   [fxFlex]="100" >
+              <!-- <h4 style="margin-bottom: 0px;padding-bottom:0px;font-weight: 100;" class="show-silver">Courses</h4> -->
+            </div>
+              <div   [fxFlex]="100" >
+                <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="0px" style="border-bottom: 1px solid silver;" >
+                  <div   [fxFlex]="30" >
+                     Course Name
+                  </div>
+                  <div   [fxFlex]="30" >
+                     Date
+                  </div>
+                  <div   [fxFlex]="30" >
+                      Time
+                  </div>
+                </div>
+                <div fxLayout="row wrap" fxLayoutAlign="start center" *ngFor="let course of student.courses" fxLayoutGap="0px" style="border-bottom: 1px solid silver;" >
+                  <div   [fxFlex]="30" >
+                     {{course.name}}
+                  </div>
+                  <div   [fxFlex]="30" >
+                     {{course.date}}
+                  </div>
+                  <div   [fxFlex]="30" >
+                      {{course.time}}
+                  </div>
+                </div>
+              </div>
+        </div>
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <button (click)="gotoStudentDetails($event)" mat-icon-button  >
+            <i class="fas  fa-eye fa-2x show-blue"></i>
+          </button>
+          <!-- <a href="#" mat-icon-button style="margin-right: 20px;" >
+            <i [class.show-green]="feature.isPersonal == 3"
+            [class.show-silver]="feature.isPersonal == 0" [class.show-orangered]="feature.isPersonal == 1" 
+            [class.show-blue]="feature.isPersonal == 2" class="fas  fa-user-tie fa-2x"></i>
+          </a>
+          <a href="#" mat-icon-button style="margin-right: 20px;">
+            <i class="fas fa-file-invoice-dollar  fa-2x "
+            [class.show-green]="feature.isFinancial == 3"
+            [class.show-silver]="feature.isFinancial == 0" [class.show-orangered]="feature.isFinancial == 1" 
+            [class.show-blue]="feature.isFinancial == 2"></i>
+          </a>
+          <a href="#" mat-icon-button style="margin-right: 40px;">
+            <i class="fas fa-handshake fa-2x" [class.show-green]="feature.isBusiness == 3"
+            [class.show-silver]="feature.isBusiness == 0" [class.show-orangered]="feature.isBusiness == 1" 
+            [class.show-blue]="feature.isBusiness == 2"></i>
+          </a> -->
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

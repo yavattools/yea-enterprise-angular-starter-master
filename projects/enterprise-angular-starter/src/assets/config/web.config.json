@@ -1,0 +1,9 @@
+{
+    "baseApiUrl" : "http://54.152.4.85:8082",
+    "idleTimoutVal": 7200,
+    "countDownVal" : 60,
+    "httpErrorCodeForRedirection": "302,0"
+}
+
+
+

@@ -1,0 +1,127 @@
+<div class="yea-login-page-background" >
+  <div  layout="column" layout-gt-xs="row" fxLayoutAlign="center center"
+     layout-fill class="yea-login-bg-shadow" [ngClass]="routeAnimationsElements">
+<div class="Aligner">
+  <div class="Aligner-item" [ngClass]="routeAnimationsElements">
+    <mat-card class="container" [ngClass]="isSignUpActive? 'right-panel-active': ''" #container id="container" >
+      <div class="form-container sign-up-container" *ngIf="isSignUpActive" >
+       <form action="#">
+        <h1 id="title" >Create Account</h1>
+        <div style="height: 20px;">
+          <!-- <a href="#" class="social" ><i class="fab fa-facebook-f fa-2x"></i></a>
+          <a href="#" class="social" ><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="#" class="social" ><i class="fab fa-google fa-2x"></i></a>
+           -->
+        </div>
+        <span >Or use your email for registration</span>
+          <mat-form-field flex autocomplete="off"> 
+            <input id="Name" matInput #userElement   autocomplete="off"
+             placeholder="Name" type="text" maxlength="30"
+              name="username"  required>
+            <span matPrefix>
+                <mat-icon class="material-icons">person</mat-icon>
+            </span>
+            <span matSuffix >
+                <mat-icon class="material-icons" 
+                >edit</mat-icon>
+            </span>
+            <mat-hint align="end">
+              <span class="show-orangered">Required</span>
+            </mat-hint>
+          </mat-form-field>
+          <mat-form-field flex autocomplete="off"> 
+            <input id="email" matInput #userElement   autocomplete="off"
+               
+             placeholder="Email" type="text" maxlength="30"
+              name="email"  required>
+            <span matPrefix>
+                <mat-icon class="material-icons">email</mat-icon>
+            </span>
+            <span matSuffix >
+                <mat-icon class="material-icons" 
+                >edit</mat-icon>
+            </span>
+            <mat-hint align="end">
+              <span class="show-orangered">Required</span>
+            </mat-hint>
+          </mat-form-field>
+          <mat-form-field flex > 
+            <input id="password" matInput #passElement  
+              
+             placeholder="Password" type="password" name="password"  required>
+            <span matPrefix>
+                <i class="material-icons">lock</i>
+              </span>
+            <span matSuffix>
+              <i class="material-icons" 
+              >edit</i>
+            </span>
+            <mat-hint align="end">
+              <span  class="show-orangered">Required</span>
+            </mat-hint>
+          </mat-form-field>
+        <button  class="signup-ghost">Sign Up</button>
+      </form>
+    </div>
+      
+    <div class="form-container sign-in-container" *ngIf="!isSignUpActive">
+       <form action="#">
+      <div class="social-container" [ngClass]="routeAnimationsElements">
+        <h1 id="title" [ngClass]="routeAnimationsElements">Sign in</h1>
+        <a href="#" class="social" [ngClass]="routeAnimationsElements"><i class="fab fa-facebook-f fa-2x signin-icon"></i></a>
+          <a href="#" class="social" [ngClass]="routeAnimationsElements"><i class="fab fa-twitter fa-2x signin-icon"></i></a>
+          <a href="#" class="social" [ngClass]="routeAnimationsElements"><i class="fab fa-google fa-2x signin-icon"></i></a>
+      </div>
+      <span [ngClass]="routeAnimationsElements">Or use your account</span>
+      <mat-form-field flex autocomplete="off" class="streach-h-100"> 
+        <input id="username" matInput #userElement #userControl="ngModel" 
+          (keydown)="keyDownFunction($event)"  [(ngModel)]="username"   autocomplete="off"
+          placeholder="Username" type="text" maxlength="30"
+            name="username"  required>
+          <span matPrefix><mat-icon [class.show-green]="username" [class.show-silver]="!username">person</mat-icon></span>
+          <span matSuffix ><mat-icon [class.show-green]="username" [class.show-silver]="!username"    >edit</mat-icon></span>
+          <mat-hint align="end">
+            <span [hidden]="!userControl.errors?.required || userControl.pristine" class="show-orangered">Required</span>
+          </mat-hint>
+          <!-- <mat-hint align="end">{{userElement.value.length}} / 30</mat-hint> -->
+        </mat-form-field>
+        <mat-form-field flex class="streach-h-100"> 
+          <input id="password" matInput #passElement #passControl="ngModel" [(ngModel)]="password"
+             (keydown)="keyDownFunction($event)"
+           placeholder="Password" type="password" name="password"  required>
+          <span matPrefix><mat-icon [class.show-green]="password" [class.show-silver]="!password">lock</mat-icon></span>
+          <span matSuffix><mat-icon [class.show-green]="password" [class.show-silver]="!password">edit</mat-icon></span>
+          <mat-hint align="end">
+            <span [hidden]="!passControl.errors?.required || passControl.pristine" class="show-orangered">Required</span>
+          </mat-hint>
+        </mat-form-field>
+      <a href="#" class="forgot-password-link" [ngClass]="routeAnimationsElements">Forgot your password?</a>
+      <button class="sign-ghost" (click)="doSignIn()" [ngClass]="routeAnimationsElements">Sign In</button>
+    </form>
+    </div>
+      
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <i style="position: relative;" class="fas fa-graduation-cap fa-4x"></i>
+            <h1 id="title" >Welcome!</h1>
+            <h1 id="title" >Tution PLUS</h1>
+        <p >Login with your personal info</p>
+        <button class="sign-ghost-overlay" (click)="signInHandler($event)" id="signIn">Sign In</button>
+          </div>
+          
+          <div class="overlay-panel overlay-right">
+            <i style="position: relative;" class="fas fa-graduation-cap fa-4x"></i>
+            <h1 [ngClass]="routeAnimationsElements" id="title">Tution PLUS!</h1>
+        <p [ngClass]="routeAnimationsElements">Right Place to Learn Right!!</p>
+        <button [ngClass]="routeAnimationsElements" class="signup-ghost-overlay"
+             (click)="signUpHandler($event)"  id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
+
+</div>
+</div>

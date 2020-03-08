@@ -1,0 +1,207 @@
+@import '../../../../../../styles/styles-variables';
+
+
+.yea-login-page-background {
+  background: url($login-screen-bg-image) no-repeat transparent;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  position: relative;
+  height: 100%;
+  background-position: center;
+  background-repeat: repeat-x;
+  overflow-y: hidden;
+}
+
+.yea-login-bg-shadow {
+  background-color: $login-screen-bg-shadow !important;
+  margin: 0px !important;
+  position: fixed !important;
+  left: 0px !important;
+  right: 0px !important;
+  top: 0px !important;
+  bottom: 0px !important;
+  overflow-y: scroll !important;
+}
+
+.login-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.login-label {
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.card {
+  width: 380px;
+
+  @include media-xs {
+    width: 300px;
+  }
+
+  .header {
+    //   background: $theme-color-primary;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+}
+
+.launch-login-card {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.1),
+    inset 20px 0 80px rgba(255, 255, 255, 0.1),
+    inset -20px 0 80px rgba(255, 255, 255, 0.1),
+    inset 20px 0 300px rgba(255, 255, 255, 0.1),
+    inset -20px 0 300px rgba(255, 255, 255, 0.1),
+    0 0 50px rgba(255, 255, 255, 0.1), -10px 0 80px rgba(255, 255, 255, 0.1),
+    10px 0 80px rgba(255, 255, 255, 0.1);
+
+  padding: 0px !important;
+  // .material-icons{
+  //     color: gray;
+  // }
+  //   .signin-button-enabled{
+  //       background-color:rgba(255,255,255,0.3) !important;
+  //       border: 1px solid #fff !important;
+  //       // color: $login-screen-subtitle-color !important;
+  //       font-weight: 500;
+  //   }
+
+  //   .signin-button-disabled{
+  //     background-color:rgba(255,255,255,0.3) !important;
+  //     border: 1px solid #fff !important;
+  //     color: gray !important;
+  //     font-weight: 500;
+  // }
+
+  .signin-button:hover {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border: 1px solid #fff !important;
+  }
+  mat-card-header {
+    .mat-card-header-text {
+      padding: 0px !important;
+    }
+  }
+  .mat-hint {
+    color: orangered !important;
+  }
+  .mat-card-title {
+    text-align: center !important;
+    // color: $login-screen-subtitle-color;
+    font-weight: 700 !important;
+    margin-bottom: 25px !important;
+  }
+  .mat-card-content {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    border-top: 1px solid silver !important;
+    margin: 0px !important;
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    padding-top: 20px !important;
+  }
+  .mat-input-placeholder {
+    // color: $lightForgroundColor50 !important;
+    text-shadow: none !important;
+    font-weight: 200 !important;
+  }
+
+  .mat-form-field-placeholder {
+    color: rgba(0, 0, 0, 0.65) !important;
+    font-weight: 300 !important;
+  }
+
+  .mat-card-actions {
+    background-color: transparent !important;
+    // margin-top:0px !important;
+    margin: 0px !important;
+    padding: 5px !important;
+    // button{
+    //     color: $login-screen-subtitle-color !important;
+    // }
+  }
+
+  .mat-card-footer {
+    margin: 0px !important;
+    position: relative !important;
+    padding: 0px !important;
+  }
+}
+
+.login-progress-div {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute !important;
+  top: 220px !important ;
+  left: 0px !important;
+  right: 0px !important;
+  bottom: 0px !important;
+
+  .spinner {
+    height: 20px !important;
+    width: 20px !important;
+  }
+}
+.launch-login-card-form-div {
+  // padding-left:20px;
+  // padding-right:20px;
+  // background-color:$primary;
+  padding-top: 0px;
+  margin-bottom: 0px;
+}
+
+.launch-login-card-title {
+  text-align: center;
+  //  color: $lightForgroundColor100;
+  font-weight: 400;
+}
+
+.mat-input-placeholder {
+  color: blue !important;
+  //     color: black;
+  font-weight: 300;
+}
+
+.mat-input-element {
+  color: white !important;
+  font-weight: 300 !important;
+  background-color: transparent !important;
+}
+.mat-input-infix {
+  background-color: transparent !important;
+}
+md-hint {
+  color: orangered;
+}
+.mat-input-underline {
+  border-color: gray !important;
+}
+
+.mat-raised-button[disabled] {
+  color: rgba(255, 255, 255, 0.3) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+//    md-icon{
+//     color: gray;
+//    }
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  //   border: 1px solid green;
+  -webkit-text-fill-color: #0277bd;
+  background-color: transparent !important;
+  //   -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

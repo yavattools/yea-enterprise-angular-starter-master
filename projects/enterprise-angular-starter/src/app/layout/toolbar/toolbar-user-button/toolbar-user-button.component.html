@@ -1,0 +1,38 @@
+<div class="user-button" #userButton (yeaClickOutside)="onClickOutside()" fxFlex="grow">
+    <button class="button" mat-button (click)="toggleDropdown()" [class.open]="isOpen" fxFlex="grow">
+    <span fxLayout="row" fxLayoutAlign="start center">
+      <img class="avatar" src="assets/img/avatars/noavatar.png">
+      <div class="name-title-div" fxHide fxShow.gt-sm>
+        <h4 style="margin:0px  !important;padding:0px !important;" class="full-name" >{{loginUser?.firstName}}  {{loginUser?.lastName}}</h4>
+        <!-- <h6 style="margin:0px  !important;padding:0px  !important;" class="designation" ><small>{{(loginUserStaffProfile$ | async)?.designation?.name}}</small></h6> -->
+        <h6 style="margin:0px  !important;padding:0px  !important;" class="designation" ><small>Requester</small></h6>
+      </div>
+      <mat-icon class="icon" fxHide fxShow.gt-sm>keyboard_arrow_down</mat-icon>
+    </span>
+  </button>
+
+  <div class="dropdown mat-elevation-z1" [class.open]="isOpen">
+    <div class="content">
+      <div class="list">
+        <div class="item" matRipple>
+          <mat-icon color="primary" >account_circle</mat-icon>
+          <!-- <mat-card-title color="primary">Profile</mat-card-title> -->
+          <span class="user-profile-menu-title">Profile</span>
+        </div>
+        <div class="item" matRipple (click)="goToSettings()">
+          <mat-icon color="primary" >settings</mat-icon>
+          <span class="user-profile-menu-title">Settings</span>
+        </div>
+        <div class="item" matRipple>
+          <mat-icon color="primary" >help</mat-icon>
+          <span class="user-profile-menu-title">Help</span>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="item" matRipple (click)="gotoLogout()" [routerLink]="['/login']">
+          <mat-icon color="primary" >exit_to_app</mat-icon>
+          <span class="user-profile-menu-title">Logout</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

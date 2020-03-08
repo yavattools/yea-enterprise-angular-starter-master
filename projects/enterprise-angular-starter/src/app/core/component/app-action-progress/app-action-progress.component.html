@@ -1,0 +1,26 @@
+<div [@dialog] *ngIf="visible" class="dialog">
+        <div    fxLayout fxLayoutWrap  style="width:100% !important;"
+                fxLayoutAlign="center center" fxLayout="row" fxLayoutGap="20px" >
+
+           <div fxFlex  [fxFlex]="100" [fxFlex.sm]="100" [fxFlex.xs]="100" [fxFlex.md]="100"
+                 [fxFlex.lg]="100"  [fxFlex.xl]="100" fxLayoutAlign="center center"
+                 >
+                <mat-progress-spinner  [diameter]="70" [strokeWidth]="5"
+                    color="primary"
+                    mode="indeterminate"
+                    >
+                </mat-progress-spinner>
+           </div>
+        </div>
+        <div    fxLayout fxLayoutWrap  style="width:100% !important;"
+                fxLayoutAlign="center center" fxLayout="row" fxLayoutGap="20px" >
+           <div fxFlex  [fxFlex]="100" [fxFlex.sm]="100" [fxFlex.xs]="100" [fxFlex.md]="100"
+                   [fxFlex.lg]="100"  [fxFlex.xl]="100" fxLayoutAlign="center center">
+                <ng-content>
+              
+                </ng-content>
+           </div>
+        </div>       
+</div>
+<div *ngIf="visible" class="overlay"></div>
+

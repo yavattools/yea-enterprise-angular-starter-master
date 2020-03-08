@@ -1,0 +1,30 @@
+ <div class="save-dialog-outer-card">
+    <div fxLayout  fxLayout="row"
+          fxLayoutAlign="start start">
+      <div [fxFlex]="100" fxLayoutAlign="start center" class="top-details-section">
+          <h2>Session Expiration!</h2>
+      </div>
+    </div>
+    <div fxLayout  fxLayout="row"
+          fxLayoutAlign="start center">
+      <div [fxFlex]="100" fxLayoutAlign="start center" class="content">
+          <div>
+              <h2>Need More Time?</h2>
+              <mat-card-subtitle>Your Session Is About To Expire. You Will Be Automatically Logged Out In</mat-card-subtitle>
+              <h2 class="show-orangered">{{timeout}}</h2>
+              <mat-card-subtitle>To Continue Your Session, Select "Stay Logged In."</mat-card-subtitle>
+            </div>
+      </div>
+    </div>
+    <div fxLayout  fxLayout="row"
+          fxLayoutAlign="end center">
+      <div [fxFlex]="100" fxLayoutAlign="end center" class="footer-section" fxLayoutGap="10px">
+          <button id="cancel" mat-raised-button color="primary"  (click)="logout()">Log Out</button>
+          <button id="saveDraft" mat-raised-button color="primary" [autofocus]="true" (click)="reset()"> Stay Logged In</button>
+      </div>
+    </div>
+
+  </div>
+
+
+

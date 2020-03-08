@@ -1,0 +1,97 @@
+@import '../../../../styles/styles-variables';
+
+
+.user-button {
+  position: relative;
+  display: flex;
+
+  .button {
+    min-width: $toolbar-button-width;
+
+    .name-title-div {
+      position: relative;
+      margin-top: 12px;
+      text-align: right;
+      padding-left: 15px;
+      padding-right: 10px;
+      .full-name {
+        font: 500 18px/20px Roboto, 'Helvetica Neue', sans-serif !important;
+      }
+
+      .designation {
+        font: 300 15px/16px Roboto, 'Helvetica Neue', sans-serif !important;
+      }
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .name {
+      margin: 0 8px 0 10px;
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+      font-size: 16px;
+      transform: rotate(0);
+      transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    &.open {
+      background: rgba(0, 0, 0, 0.05);
+
+      .icon {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  .dropdown {
+    background: white;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    width: 100%;
+    min-width: 160px;
+    z-index: -1;
+    transform: translateY(-110%);
+    visibility: hidden;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+      visibility 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    .list {
+      padding-top: $spacing/3;
+
+      .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        height: 48px;
+        padding: 0 $spacing/1.5;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+
+        .icon {
+          padding-right: $spacing/1.5;
+          color: $theme-icon;
+        }
+
+        // .title {
+        //   color: $theme-color-primary;
+        // }
+      }
+    }
+
+    &.open {
+      transform: translateY(0);
+      visibility: visible;
+    }
+  }
+}

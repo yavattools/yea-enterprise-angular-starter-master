@@ -1,0 +1,50 @@
+@import '../../../../../node_modules/@angular/material/theming';
+
+@include mat-core();
+
+@import './default-theme.scss';
+@import './light-theme.scss';
+@import './black-theme.scss';
+@import './nature-theme.scss';
+
+@import '../styles-reset-theme';
+@import '../styles-reset';
+@import '../../app/app/app.component.scss-theme';
+@import '../../app/layout/layout-container/layout.component.scss-theme';
+@import '../../app/pages/about/about/about.component.scss-theme';
+@import '../../app/pages/auth/view/container/login/login.component.scss-theme';
+@import '../../app/pages/auth/view/container/sign/sign.component.scss-theme';
+@import '../../app/pages/dashboard/dashboard.component.scss-theme';
+
+$theme-primary-hue: 700;
+$theme-accent-hue: 500;
+$theme-warn-hue: 500;
+
+@mixin custom-components-theme($theme) {
+  @include yea-styles-reset-theme($theme);
+  @include yea-app-component-theme($theme);
+  @include yea-layout-component-theme($theme);
+  @include yea-login-component-theme($theme);
+  @include yeasign-component-theme($theme);
+  @include yea-dashboard-component-theme($theme);
+  @include yea-about-component-theme($theme);
+}
+.default-theme {
+  @include angular-material-theme($yea-theme);
+  @include custom-components-theme($yea-theme);
+}
+
+.light-theme {
+  @include angular-material-theme($yea-light-theme);
+  @include custom-components-theme($yea-light-theme);
+}
+
+.black-theme {
+  @include angular-material-theme($yea-black-theme);
+  @include custom-components-theme($yea-black-theme);
+}
+
+.nature-theme {
+  @include angular-material-theme($yea-nature-theme);
+  @include custom-components-theme($yea-nature-theme);
+}

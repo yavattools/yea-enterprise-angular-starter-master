@@ -1,0 +1,159 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "enterprise-angular-starter": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "changeDetection": "OnPush",
+          "style": "scss"
+        }
+      },
+      "root": "projects/enterprise-angular-starter",
+      "sourceRoot": "projects/enterprise-angular-starter/src",
+      "prefix": "yea",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "yea-dist/enterprise-angular-starter",
+            "index": "projects/enterprise-angular-starter/src/index.html",
+            "main": "projects/enterprise-angular-starter/src/main.ts",
+            "polyfills": "projects/enterprise-angular-starter/src/polyfills.ts",
+            "tsConfig": "projects/enterprise-angular-starter/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/enterprise-angular-starter/src/favicon.ico",
+              "projects/enterprise-angular-starter/src/assets"
+            ],
+            "styles": [
+              "projects/enterprise-angular-starter/src/assets/iconfont/material-icons.scss",
+              "projects/enterprise-angular-starter/src/styles/styles-app-loading.scss",
+              "projects/enterprise-angular-starter/src/styles.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/enterprise-angular-starter/src/styles"
+              ]
+            },
+            "scripts": ["node_modules/@fortawesome/fontawesome-free/js/all.js"]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/enterprise-angular-starter/src/environments/environment.ts",
+                  "with": "projects/enterprise-angular-starter/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "bundle",
+                  "name": "polyfills",
+                  "baseline": "250kb",
+                  "maximumWarning": "100kb",
+                  "maximumError": "150kb"
+                },
+                {
+                  "type": "bundle",
+                  "name": "styles",
+                  "baseline": "350kb",
+                  "maximumWarning": "50kb",
+                  "maximumError": "150kb"
+                },
+                {
+                  "type": "bundle",
+                  "name": "main",
+                  "baseline": "2048kb",
+                  "maximumWarning": "100kb",
+                  "maximumError": "200kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "enterprise-angular-starter:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "enterprise-angular-starter:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "enterprise-angular-starter:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/enterprise-angular-starter/src/test.ts",
+            "polyfills": "projects/enterprise-angular-starter/src/polyfills.ts",
+            "tsConfig": "projects/enterprise-angular-starter/tsconfig.spec.json",
+            "karmaConfig": "projects/enterprise-angular-starter/karma.conf.js",
+            "assets": [
+              "projects/enterprise-angular-starter/src/favicon.ico",
+              "projects/enterprise-angular-starter/src/assets"
+            ],
+            "styles": [
+              "projects/enterprise-angular-starter/src/styles-app-loading.scss",
+              "projects/enterprise-angular-starter/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "test": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/enterprise-angular-starter/src/environments/environment.ts",
+                  "with": "projects/enterprise-angular-starter/src/environments/environment.test.ts"
+                }
+              ]
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/enterprise-angular-starter/tsconfig.app.json",
+              "projects/enterprise-angular-starter/tsconfig.spec.json",
+              "projects/enterprise-angular-starter/e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/enterprise-angular-starter/e2e/protractor.conf.js",
+            "devServerTarget": "enterprise-angular-starter:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "enterprise-angular-starter:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "enterprise-angular-starter"
+}

@@ -1,0 +1,31 @@
+div.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(200, 200, 200, 0.8);
+    z-index: 999999 !important; /* Bigger than Footer index */
+  }
+  
+  .dialog {
+    z-index: 9999999;
+    position: absolute;
+     right: 20%;
+     left: 20%;
+     top: 20%;
+     bottom: 20%;
+    margin: auto !important;
+    color: white !important;
+    max-width: 520px;
+    max-height: 150px;
+    background-color: rgba(220,220,220,0);
+    padding: 8px;
+  }
+ 
+  .spinner{
+    height:30px !important;
+    width:30px !important;
+    color:green !important;
+    border-color: green !important;
+}
