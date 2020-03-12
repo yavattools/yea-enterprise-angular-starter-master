@@ -46,8 +46,9 @@ export class StudentListComponent implements OnInit {
     window.open(link, '_blank');
   }
 
-  gotoStudentDetails($event) {
-    this.router.navigateByUrl('/pages/student-details');
+  gotoStudentDetails($event, sidenav:any) {
+    sidenav.open();
+    // this.router.navigateByUrl('/pages/student-details');
   }
 
   getPersonalBioClass(meeting) {

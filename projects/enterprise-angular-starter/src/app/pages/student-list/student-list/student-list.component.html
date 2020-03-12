@@ -1,3 +1,17 @@
+<mat-sidenav-container class="student-list-sidenav-container">
+  <mat-sidenav #sidenav  class="student-list-sidenav" align="start"
+                [fixedTopGap]="0" [fixedBottomGap]="0">
+        <div fxLayout="row wrap" fxLayoutAlign="start start" style="height: 100%;background-color:aquamarine;" fxLayoutGap="0px" >
+          <div   [fxFlex]="100" fxLayoutAlign="end end">
+              <button mat-raised-button (click)="sidenav.close()">Close</button>
+          </div>
+          <div   [fxFlex]="20" ></div>
+          <div   [fxFlex]="60" >
+              <yea-student style="height: 100%;"></yea-student>
+          </div>
+          <div   [fxFlex]="20" ></div>
+        </div>
+  </mat-sidenav>
 <div class="container">
   <div class="row">
     <div class="col-md-6">
@@ -28,8 +42,8 @@
     </div>
   </div>
   <div class="row align-items-end">
-    <div *ngFor="let student of students" class="col-md-4 col-lg-3" [ngClass]="routeAnimationsElements">
-      <mat-card  >
+    <div *ngFor="let student of students"  class="col-md-4 col-lg-3" [ngClass]="routeAnimationsElements">
+      <mat-card   >
         <mat-card-header>
           <img mat-card-avatar  src="{{student.imageUrl}}">
           <mat-card-title> {{student.firstName}}, {{student.lastName}}</mat-card-title>
@@ -67,7 +81,7 @@
         </div>
         </mat-card-content>
         <mat-card-actions align="end">
-          <button (click)="gotoStudentDetails($event)" mat-icon-button  >
+          <button (click)="gotoStudentDetails($event,sidenav )" mat-icon-button  >
             <i class="fas  fa-eye fa-2x show-blue"></i>
           </button>
           <!-- <a href="#" mat-icon-button style="margin-right: 20px;" >
@@ -91,3 +105,4 @@
     </div>
   </div>
 </div>
+</mat-sidenav-container>
